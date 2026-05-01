@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Launch Security Checklist - Getyourhosting</title>
+         <link rel="stylesheet" href="/styles/styles.css"> 
+
+    <style>
+        /* === RESET & BASE STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+             padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* === ARTICLE CONTAINER === */
+        .article-container {
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* === HEADER SECTION === */
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .article-header h1 {
+            color: #0f172a;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .article-header p {
+            color: #64748b;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === SECURITY BANNER === */
+        .security-banner {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: 12px;
+            padding: 35px 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+        }
+
+        .shield-icon {
+            font-size: 3.5rem;
+            filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5));
+        }
+
+        .banner-text h3 {
+            color: #10b981; /* Secure Green */
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .banner-text p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        /* === CHECKLIST GRID === */
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* === CHECK CARDS === */
+        .check-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .check-card:hover {
+            transform: translateY(-8px);
+            border-color: #10b981; /* Turns green on hover to signify checked */
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .check-icon {
+            width: 35px;
+            height: 35px;
+            background-color: #f1f5f9;
+            color: #94a3b8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Icon turns green and rotates slightly on card hover */
+        .check-card:hover .check-icon {
+            background-color: #10b981;
+            color: #ffffff;
+            transform: rotate(360deg);
+        }
+
+        .check-card h4 {
+            color: #0f172a;
+            font-size: 1.3rem;
+        }
+
+        .check-card p {
+            color: #475569;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .action-tag {
+            display: inline-block;
+            background-color: #ede9fe; /* Light purple */
+            color: #673de6; /* Purple text */
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .security-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            .checklist-grid {
+                grid-template-columns: 1fr;
+            }
+            .check-card {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div id="navbar-placeholder"></div>
+
+    <div class="article-container">
+        
+        <header class="article-header">
+            <h1>The Pre-Launch Security Checklist</h1>
+            <p>Before taking your website live, verify these 5 essential security settings to ensure you are 100% protected against hackers.</p>
+        </header>
+
+        <div class="security-banner">
+            <div class="shield-icon">🛡️</div>
+            <div class="banner-text">
+                <h3>Where is the Real Danger?</h3>
+                <p>A static HTML website (like the one you will host on GitHub) is naturally highly secure. However, if you are using a custom Domain or a Hosting account, their security is entirely in your hands. Let's lock them down!</p>
+            </div>
+        </div>
+
+        <div class="checklist-grid">
+            
+            <div class="check-card">
+                <div class="card-header">
+                    <div class="check-icon">✓</div>
+                    <h4>1. Activate Free SSL (HTTPS)</h4>
+                </div>
+                <p>Your website link must start with 'https://' instead of 'http://'. This encrypts your visitors' data and significantly boosts your Google ranking.</p>
+                <div class="action-tag">Action: Enable Let's Encrypt in your hosting panel.</div>
+            </div>
+
+            <div class="check-card">
+                <div class="card-header">
+                    <div class="check-icon">✓</div>
+                    <h4>2. Enable 2FA on Domain & Email</h4>
+                </div>
+                <p>A bigger threat than a hacked website is a stolen domain name. Always keep Two-Factor Authentication (2FA) active on your Domain Registrar and Hosting accounts.</p>
+                <div class="action-tag">Action: Set up OTP login in your account settings.</div>
+            </div>
+
+            <div class="check-card">
+                <div class="card-header">
+                    <div class="check-icon">✓</div>
+                    <h4>3. Add WHOIS Privacy Protection</h4>
+                </div>
+                <p>If you don't enable WHOIS privacy when buying a domain, your personal name and phone number become public, leading to endless scam calls and spam emails.</p>
+                <div class="action-tag">Action: Add 'Privacy Protection' during domain checkout.</div>
+            </div>
+
+            <div class="check-card">
+                <div class="card-header">
+                    <div class="check-icon">✓</div>
+                    <h4>4. Set Up Automated Backups</h4>
+                </div>
+                <p>Mistakes happen. To restore your entire website with a single click in case of an emergency, always keep Daily or Weekly automated backups enabled.</p>
+                <div class="action-tag">Action: Set a backup schedule in your hosting panel.</div>
+            </div>
+
+            <div class="check-card">
+                <div class="card-header">
+                    <div class="check-icon">✓</div>
+                    <h4>5. Change Default Usernames</h4>
+                </div>
+                <p>If you decide to use WordPress, never leave your login username as "admin". Hackers universally use this default name first for brute-force attacks.</p>
+                <div class="action-tag">Action: Delete the "admin" user and create a custom ID.</div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

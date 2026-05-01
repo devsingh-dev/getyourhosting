@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Cloud Hosting Providers | Hosting Comparison</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        /* CSS Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0fdfa; /* Very light teal background */
+            color: #334155;
+            line-height: 1.6;
+            padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* Hero Section */
+        .cloud-hero {
+            background: linear-gradient(135deg, #0f766e, #064e3b);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Optional: Adding a subtle cloud-like pattern/gradient overlay */
+        .cloud-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cloud-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ccfbf1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cloud-hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto;
+            color: #99f6e4;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Educational Section */
+        .edu-section {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            border-top: 4px solid #0d9488;
+        }
+
+        .edu-section h2 {
+            color: #0f766e;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 2px solid #ccfbf1;
+            padding-bottom: 10px;
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 25px;
+        }
+
+        .edu-box h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Top 5 Ranked List */
+        .ranking-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ranking-header h2 {
+            font-size: 2.5rem;
+            color: #0f172a;
+        }
+
+        .top5-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ranked-card {
+            display: flex;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .ranked-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(13, 148, 136, 0.1);
+            border-color: #0d9488;
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 45px;
+            height: 45px;
+            background: #0d9488;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(13, 148, 136, 0.4);
+        }
+
+        /* Gold styling for Rank #1 */
+        .ranked-card:nth-child(1) { 
+            border: 2px solid #fbbf24; 
+        }
+        .ranked-card:nth-child(1) .rank-badge { 
+            background: #fbbf24; 
+            color: #78350f; 
+            box-shadow: 0 4px 6px rgba(251, 191, 36, 0.4); 
+        }
+
+        .provider-info {
+            flex: 1;
+        }
+
+        .provider-logo-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .hardware-specs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .spec-tag {
+            background: #f0fdfa;
+            border: 1px solid #ccfbf1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #0f766e;
+            font-weight: 600;
+        }
+
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .pros, .cons { margin: 0; }
+        .pros strong { color: #16a34a; }
+        .cons strong { color: #dc2626; }
+
+        .action-section {
+            text-align: center;
+            min-width: 220px;
+            border-left: 2px dashed #e2e8f0;
+            padding-left: 30px;
+        }
+
+        .price-start {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .main-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin: 5px 0 20px 0;
+        }
+
+        .main-price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #64748b;
+        }
+
+        .btn-visit {
+            display: block;
+            background: #0d9488;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-visit:hover { 
+            background: #0f766e; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cloud-hero h1 { font-size: 2.2rem; }
+            .ranked-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .action-section {
+                border-left: none;
+                border-top: 2px dashed #e2e8f0;
+                padding-left: 0;
+                padding-top: 25px;
+                width: 100%;
+                text-align: left;
+            }
+            .pros-cons-grid { grid-template-columns: 1fr; }
+        }
+         /* --- Disclaimer Section --- */
+        .disclaimer-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .disclaimer-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--accent); /* Orange accent line */
+            padding: 15px 20px;
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .disclaimer-box strong {
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <header class="cloud-hero">
+        <h1>Ultimate Cloud Hosting Guide</h1>
+        <p>Discover scalable, flexible, and ultra-reliable cloud infrastructure. Compare the best cloud hosting platforms for businesses of all sizes.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="edu-section">
+            <h2>What is Cloud Hosting?</h2>
+            <p>Unlike traditional hosting which relies on a single physical server, Cloud Hosting uses a network of connected virtual and physical servers to host your website. If one server goes down, another instantly takes over, ensuring maximum uptime. It also allows you to scale resources (RAM, CPU) up or down instantly based on your traffic.</p>
+            
+            <div class="edu-grid">
+                <div class="edu-box">
+                    <h3>📈 Why Choose Cloud?</h3>
+                    <p>Perfect for fast-growing websites, SaaS applications, e-commerce stores with seasonal traffic spikes, and businesses that need 100% uptime guarantees and "pay-as-you-go" flexibility.</p>
+                </div>
+                <div class="edu-box">
+                    <h3>⚙️ Managed vs. Unmanaged</h3>
+                    <p><strong>Unmanaged Cloud</strong> is cheaper but requires you to set up the OS and security yourself via command line. <strong>Managed Cloud</strong> costs more but includes a user-friendly dashboard and full technical support.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ranking-header">
+            <h2>Top Cloud Hosting Providers (2026)</h2>
+            <p>Ranked based on scalability, uptime, pricing transparency, and global network performance.</p>
+        </section>
+
+        <div class="top5-list">
+            
+         <article class="ranked-card">
+                <div class="rank-badge">1</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">  <span class="logo-text"><img src="/Images/Hostinger-logo-primary.png" width="200"></span>
+           (Cloud Startup)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">4 CPU Cores</span>
+                        <span class="spec-tag">4 GB RAM</span>
+                        <span class="spec-tag">100 GB NVMe Storage</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Includes Free Domain, Dedicated IP, CDN, Unlimited SSL, and Priority 24/7 expert support.</p>
+                        <p class="cons"><strong>Cons:</strong> To get this price, you must commit to a 48-month term. Renews at a higher rate of ₹1599/mo.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">+2 mo. free (48-mo term)</div>
+                    <div class="main-price">₹599<span>/mo</span></div>
+                    <a href="https://www.hostinger.in/cloud-hosting" class="btn-visit" target="_blank" rel="noopener noreferrer">Choose plan</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">2</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">
+                        <span class="logo-text"><img src="/Images/GoDaddy_LockUp_RGB_Teal.png" width="200" alt="GoDaddy Logo"></span>
+                        <br><span style="font-size: 1.2rem; font-weight: 600; color: #475569;">(Web Hosting Plus Expand)</span>
+                    </div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">16 vCPU Cores</span>
+                        <span class="spec-tag">32 GB RAM</span>
+                        <span class="spec-tag">400 GB NVMe Storage</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Includes cPanel, Free Domain, Free Dedicated IP, and unlimited SSLs. Host up to 200 websites.</p>
+                        <p class="cons"><strong>Cons:</strong> Requires a 3-year upfront commitment to lock in the discounted ₹4,939/mo price.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Save 22% (First 3-yr term)</div>
+                    <div class="main-price">₹4,939<span>/mo</span></div>
+                    <a href="https://www.godaddy.com/en-in/hosting/web-hosting-plus" class="btn-visit" target="_blank" rel="noopener noreferrer">Buy Now</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">3</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">  <span class="logo-text"><img src="/Images/MilesWeb Logo-Full-color.png" width="200"></span>
+            (Cloud Pro)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">5 CPU Cores</span>
+                        <span class="spec-tag">5 GB RAM</span>
+                        <span class="spec-tag">150 GB NVMe Storage</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Includes cPanel, LiteSpeed Server + CDN, Free Domain, and a guaranteed flat renewal rate (no price increase).</p>
+                        <p class="cons"><strong>Cons:</strong> Requires an upfront payment for a 36-month term to secure the 70% discount.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">+3 mo free (36-mo term)</div>
+                    <div class="main-price">₹449<span>/mo</span></div>
+                    <a href="https://www.milesweb.in/hosting/cloud-hosting" class="btn-visit" target="_blank" rel="noopener noreferrer">Choose Plan</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">4</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name"> <span class="logo-text"><img src="/Images/Blue_Host_idSiPtxwZG_5.png" width="200"></span>
+            (Pro Plan)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">5X CPU Power</span>
+                        <span class="spec-tag">100 GB NVMe Storage</span>
+                        <span class="spec-tag">100 Websites</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Packed with advanced features like Object Caching, WP Staging, WAF, DDoS protection, free domain, and free migration.</p>
+                        <p class="cons"><strong>Cons:</strong> Requires a full 36-month commitment upfront to get the 48% discount, and renews at ₹1,199/mo.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Save 48% (36-mo term)</div>
+                    <div class="main-price">₹629<span>/mo</span></div>
+                    <a href="https://www.bluehost.in/" class="btn-visit" target="_blank" rel="noopener noreferrer">Choose Plan</a>
+                </div>
+            </article>
+
+            
+
+        </div>
+        <div class="disclaimer-wrapper">
+        <div class="disclaimer-box">
+            <strong>Disclaimer:</strong> The prices, features, and services mentioned on this page are for informational purposes and are subject to change by the hosting providers without prior notice. Please verify the latest pricing and plan details directly on the official websites before making a purchase. We are not responsible for any discrepancies or sudden changes in their offerings.
+        </div>
+    </div>
+    </main>
+
+   <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+</body>
+</html>

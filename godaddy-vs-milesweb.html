@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MilesWeb vs GoDaddy for Beginners | Web Hosting Comparison</title>
+    <link rel="stylesheet" href="/styles/styles.css"> 
+    <style>
+        /* CSS Variables */
+        :root {
+            --text-main: #222222;
+            --text-light: #555555;
+            --bg-color: #f7f9fc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --milesweb-color: #ff5c00; /* MilesWeb Orange */
+            --godaddy-color: #111111; /* GoDaddy Black */
+            --success-color: #10b981;
+        }
+
+        /* Basic Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            padding-top: 80px; /* Navbar gap */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Typography */
+        h1 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .milesweb-title { color: var(--milesweb-color); }
+        .godaddy-title { color: var(--godaddy-color); }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feature Cards with Hover Effect */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Brand Specific Card Styles */
+        .card-milesweb { border-top: 4px solid var(--milesweb-color); }
+        .card-milesweb h3 { color: var(--milesweb-color); }
+        
+        .card-godaddy { border-top: 4px solid var(--godaddy-color); }
+        .card-godaddy h3 { color: var(--godaddy-color); }
+
+        .number-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            color: white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .badge-milesweb { background-color: var(--milesweb-color); }
+        .badge-godaddy { background-color: var(--godaddy-color); }
+
+        /* Final Verdict & CTA */
+        .verdict {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-milesweb { background-color: var(--milesweb-color); }
+        .btn-milesweb:hover { background-color: #e65300; transform: translateY(-2px); }
+
+        .btn-godaddy { background-color: var(--godaddy-color); }
+        .btn-godaddy:hover { background-color: #333333; transform: translateY(-2px); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 { font-size: 2rem; }
+            .cta-container { flex-direction: column; width: 100%; }
+            .cta-button { text-align: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    <div class="container">
+        <header>
+            <h1>MilesWeb vs GoDaddy: <br>Which Should a Beginner Choose?</h1>
+            <p style="text-align: center; font-size: 1.1rem;">Are you looking for an all-in-one global giant or a highly affordable local hero? Here are 5 factual reasons to choose each platform.</p>
+        </header>
+
+        <!-- MILESWEB SECTION -->
+        <h2 class="milesweb-title">5 Reasons to Choose MilesWeb</h2>
+        <p>Best for beginners and local businesses who want extremely affordable pricing, local data centers, and dedicated hands-on support.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">1</div>
+                <h3>Incredible Value for Money</h3>
+                <p>MilesWeb offers some of the most budget-friendly introductory plans in the market. Even on their base tier, they include premium features like SSD storage, free SSL, and a free website builder that competitors charge extra for.</p>
+            </div>
+            
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">2</div>
+                <h3>Local Data Centers (India & Beyond)</h3>
+                <p>If your target audience is in India or Asia, MilesWeb operates local data centers (like in Mumbai). Hosting your website closer to your visitors ensures significantly faster load times and better local SEO rankings.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">3</div>
+                <h3>Free Website Migration</h3>
+                <p>If you already have a website on another host and want to switch, MilesWeb’s technical team will migrate your entire website, emails, and databases to their servers completely free of charge, with zero downtime.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">4</div>
+                <h3>Highly Rated 24/7/365 Support</h3>
+                <p>MilesWeb is famous for its customer service. They offer lightning-fast support via live chat, email, and even WhatsApp. For a beginner stuck on a technical issue, this instant, friendly help is invaluable.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">5</div>
+                <h3>Pre-Configured WordPress</h3>
+                <p>Their WordPress hosting plans come with WordPress pre-installed and pre-configured with caching plugins. You don't need any technical knowledge to set up databases; you can start writing your blog from day one.</p>
+            </div>
+        </section>
+
+        <!-- GODADDY SECTION -->
+        <h2 class="godaddy-title">5 Reasons to Choose GoDaddy</h2>
+        <p>Best for business owners who prefer an all-in-one ecosystem and value the ability to manage domains, marketing, and hosting under one roof.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">1</div>
+                <h3>The "All-in-One" Ecosystem</h3>
+                <p>GoDaddy is the world's largest domain registrar. For a beginner, buying your domain, hosting, email, and marketing tools from a single company means you only have one dashboard and one login to remember.</p>
+            </div>
+            
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">2</div>
+                <h3>Global Phone Support</h3>
+                <p>While many hosts rely strictly on Live Chat, GoDaddy offers true 24/7 phone support across the globe in multiple languages. If you want the comfort of speaking to a real human on the phone, GoDaddy excels here.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">3</div>
+                <h3>Beginner-Friendly Website Builder</h3>
+                <p>If WordPress feels too complicated, GoDaddy offers its own proprietary drag-and-drop website builder. It is incredibly easy to use and lets you launch a professional-looking business site in just a few hours.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">4</div>
+                <h3>Seamless Microsoft 365 Integration</h3>
+                <p>If you need professional business email (like <em>contact@yourname.com</em>), GoDaddy has a deep partnership with Microsoft 365. Setting up professional email is seamless and often included for the first year.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">5</div>
+                <h3>Unmetered Bandwidth Standard</h3>
+                <p>Even on their most basic entry-level shared hosting plans, GoDaddy includes unmetered bandwidth. This ensures that if your website gets an unexpected spike in traffic, it won't be penalized or taken offline.</p>
+            </div>
+        </section>
+
+        <!-- Final Verdict -->
+        <h2>Final Verdict</h2>
+        <div class="verdict">
+            <p><strong>Which one is right for you?</strong> <br><br>Choose <strong>MilesWeb</strong> if you are on a strict budget, your primary audience is based in India/Asia, and you want excellent, fast live chat support with free SSL and migrations included. <br><br>Choose <strong>GoDaddy</strong> if you want the ultimate convenience of having your domains, Microsoft 365 email, and website builder all in one single account, backed by 24/7 global phone support.</p>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button btn-milesweb" target="_blank" rel="noopener noreferrer">View MilesWeb Plans</a>
+            <a href="https://www.godaddy.com" class="cta-button btn-godaddy" target="_blank" rel="noopener noreferrer">View GoDaddy Plans</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

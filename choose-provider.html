@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Choose a Web Host - Getyourhosting</title>
+     <link rel="stylesheet" href="/styles/styles.css"> 
+    <style>
+        /* === RESET & BASE STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+             padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* === ARTICLE CONTAINER === */
+        .article-container {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* === HEADER SECTION === */
+        .article-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .article-header h1 {
+            color: #0f172a;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .article-header p {
+            color: #64748b;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === FACTORS GRID === */
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* === FACTOR CARDS === */
+        .factor-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+            border-top: 5px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        /* Unique border colors for different factors */
+        .factor-card:nth-child(1) { border-top-color: #3b82f6; } /* Blue - Uptime */
+        .factor-card:nth-child(2) { border-top-color: #10b981; } /* Green - Speed */
+        .factor-card:nth-child(3) { border-top-color: #f59e0b; } /* Yellow - Support */
+        .factor-card:nth-child(4) { border-top-color: #ef4444; } /* Red - Price */
+        .factor-card:nth-child(5) { border-top-color: #8b5cf6; } /* Purple - Scale */
+
+        .factor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .factor-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f8fafc;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .factor-card:hover .factor-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .factor-card h3 {
+            color: #0f172a;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .factor-card p {
+            color: #475569;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .must-have-tag {
+            display: inline-block;
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-left: 3px solid #0f172a;
+        }
+
+        /* === CTA / SUMMARY BOX === */
+        .summary-box {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: #ffffff;
+            background-image: radial-gradient(circle at top right, #2e3b52, transparent);
+        }
+
+        .summary-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .summary-box p {
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn-primary {
+            display: inline-block;
+            background-color: #673de6; /* Your brand purple */
+            color: white;
+            padding: 14px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(103, 61, 230, 0.4);
+        }
+
+        .cta-btn-primary:hover {
+            background-color: #5b36cc;
+            transform: translateY(-2px);
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            .factors-grid {
+                grid-template-columns: 1fr;
+            }
+            .factor-card {
+                padding: 25px 20px;
+            }
+            .summary-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div id="navbar-placeholder"></div>
+
+    <div class="article-container">
+        
+        <header class="article-header">
+            <h1>How to Choose a Web Hosting Provider</h1>
+            <p>Don't just guess with your website's foundation. Evaluate these 5 critical factors to find a secure, fast, and reliable hosting plan.</p>
+        </header>
+
+        <div class="factors-grid">
+            
+            <div class="factor-card">
+                <div class="factor-icon">⏱️</div>
+                <h3>1. Uptime Guarantee</h3>
+                <p>If your website goes offline, you lose visitors, trust, and potential sales. Never settle for anything less than a 99.9% uptime guarantee.</p>
+                <div class="must-have-tag">Look for: 99.9% Uptime SLA</div>
+            </div>
+
+            <div class="factor-card">
+                <div class="factor-icon">⚡</div>
+                <h3>2. Speed & Performance</h3>
+                <p>A slow website hurts your Google SEO rankings and frustrates users. Ensure the host uses modern technology like NVMe SSD storage and LiteSpeed servers.</p>
+                <div class="must-have-tag">Look for: NVMe SSDs & Free CDN</div>
+            </div>
+
+            <div class="factor-card">
+                <div class="factor-icon">🎧</div>
+                <h3>3. Customer Support</h3>
+                <p>When your site breaks at 2 AM, you need immediate help. Test their support response time via live chat before you commit to purchasing a plan.</p>
+                <div class="must-have-tag">Look for: 24/7 Live Chat Support</div>
+            </div>
+
+            <div class="factor-card">
+                <div class="factor-icon">💰</div>
+                <h3>4. Renewal Pricing Traps</h3>
+                <p>Many hosts offer an incredibly cheap introductory price for the first year, only to triple the cost upon renewal. Always check the long-term renewal rates.</p>
+                <div class="must-have-tag">Look for: Transparent Renewal Rates</div>
+            </div>
+
+            <div class="factor-card">
+                <div class="factor-icon">📈</div>
+                <h3>5. Room to Grow</h3>
+                <p>You might start with a basic Shared Hosting plan, but as your traffic grows, you will need more power. Check if they offer seamless upgrades to VPS or Cloud hosting.</p>
+                <div class="must-have-tag">Look for: Easy 1-Click Upgrades</div>
+            </div>
+
+        </div>
+
+        <div class="summary-box">
+            <h3>Ready to Make a Decision?</h3>
+            <p>We have already done the hard work for you. We tested the top providers in the industry against all these 5 critical factors. Check out our side-by-side comparisons to find the perfect match for your needs.</p>
+            <a href="#" class="cta-btn-primary">View Top Hosting Comparisons</a>
+        </div>
+
+    </div>    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+
+
+</body>
+</html>

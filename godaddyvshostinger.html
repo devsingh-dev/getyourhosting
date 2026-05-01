@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostinger vs GoDaddy for Beginners | Web Hosting Comparison</title>
+    <link rel="stylesheet" href="/styles/styles.css"> 
+    <style>
+        /* CSS Variables */
+        :root {
+            --text-main: #222222;
+            --text-light: #555555;
+            --bg-color: #f7f9fc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --hostinger-color: #673de6;
+            --godaddy-color: #111111;
+            --success-color: #10b981;
+        }
+
+        /* Basic Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            padding-top: 90px; /* Navbar gap */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Typography */
+        h1 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .hostinger-title { color: var(--hostinger-color); }
+        .godaddy-title { color: var(--godaddy-color); }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feature Cards with Hover Effect */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Brand Specific Card Styles */
+        .card-hostinger { border-top: 4px solid var(--hostinger-color); }
+        .card-hostinger h3 { color: var(--hostinger-color); }
+        
+        .card-godaddy { border-top: 4px solid var(--godaddy-color); }
+        .card-godaddy h3 { color: var(--godaddy-color); }
+
+        .number-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            color: white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .badge-hostinger { background-color: var(--hostinger-color); }
+        .badge-godaddy { background-color: var(--godaddy-color); }
+
+        /* Final Verdict & CTA */
+        .verdict {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-hostinger { background-color: var(--hostinger-color); }
+        .btn-hostinger:hover { background-color: #5b36cc; transform: translateY(-2px); }
+
+        .btn-godaddy { background-color: var(--godaddy-color); }
+        .btn-godaddy:hover { background-color: #333333; transform: translateY(-2px); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 { font-size: 2rem; }
+            .cta-container { flex-direction: column; width: 100%; }
+            .cta-button { text-align: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Hostinger vs GoDaddy: <br>Which Should a Beginner Choose?</h1>
+            <p style="text-align: center; font-size: 1.1rem;">Choosing your first web host depends entirely on your specific needs. Here are the top 5 factual reasons to choose each platform.</p>
+        </header>
+
+        <!-- HOSTINGER SECTION -->
+        <h2 class="hostinger-title">5 Reasons to Choose Hostinger</h2>
+        <p>Best for beginners who are on a strict budget, want an incredibly easy interface, and need built-in AI tools.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">1</div>
+                <h3>Ultra-Low Budget Pricing</h3>
+                <p>Hostinger offers some of the most aggressive introductory pricing in the industry. If you are a student or a new blogger with a tight budget, you can launch a site for a fraction of the cost compared to competitors.</p>
+            </div>
+            
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">2</div>
+                <h3>Beginner-Friendly hPanel</h3>
+                <p>Instead of the traditional, overwhelming cPanel, Hostinger built its own custom "hPanel". It features large icons, clean menus, and makes managing domains and installing WordPress incredibly easy for non-tech users.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">3</div>
+                <h3>Free Domain & Unlimited SSL</h3>
+                <p>Hostinger includes a free domain name for the first year (on Premium plans and above) and provides free, unlimited SSL certificates that automatically install, keeping your site secure without hidden fees.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">4</div>
+                <h3>Built-in AI Website Builder</h3>
+                <p>If WordPress seems too complicated, Hostinger includes their proprietary AI Website Builder. You just type a description of your business, and the AI generates a fully coded, responsive website in minutes.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">5</div>
+                <h3>Global Data Center Choice</h3>
+                <p>Hostinger allows you to choose exactly where your server is located (USA, Europe, Asia, etc.) during setup. Placing your server closer to your target audience ensures much faster website loading times.</p>
+            </div>
+        </section>
+
+        <!-- GODADDY SECTION -->
+        <h2 class="godaddy-title">5 Reasons to Choose GoDaddy</h2>
+        <p>Best for small business owners who prefer an all-in-one ecosystem and value the ability to speak to a human via phone support.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">1</div>
+                <h3>24/7 Phone Support</h3>
+                <p>Unlike Hostinger (which relies solely on Live Chat and tickets), GoDaddy offers true 24/7 phone support. If your website crashes and you want to speak to a real human immediately, GoDaddy is the clear winner.</p>
+            </div>
+            
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">2</div>
+                <h3>The "All-in-One" Ecosystem</h3>
+                <p>GoDaddy is the world's largest domain registrar. For a beginner, buying your domain, hosting, email, and marketing tools from a single company means you only have one dashboard and one login to remember.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">3</div>
+                <h3>Seamless Microsoft 365 Integration</h3>
+                <p>If you need professional business email (like <em>contact@yourname.com</em>), GoDaddy has a deep partnership with Microsoft 365. Many of their hosting tiers include a free first year of this professional email service.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">4</div>
+                <h3>Industry Standard cPanel</h3>
+                <p>GoDaddy uses the traditional, industry-standard cPanel. While it has a slight learning curve, 90% of the internet's hosting tutorials are based on cPanel, making it easier to find help on YouTube or Google.</p>
+            </div>
+
+            <div class="feature-card card-godaddy">
+                <div class="number-badge badge-godaddy">5</div>
+                <h3>Unmetered Bandwidth Standard</h3>
+                <p>Even on their most basic entry-level hosting plans, GoDaddy includes unmetered bandwidth. This means if a beginner's blog suddenly goes viral, the website won't be shut down due to standard data limits.</p>
+            </div>
+        </section>
+
+        <!-- Final Verdict -->
+        <h2>Final Verdict</h2>
+        <div class="verdict">
+            <p><strong>Who wins? It depends on you.</strong> <br><br>Choose <strong>Hostinger</strong> if you are tech-savvy enough to use Live Chat, want faster NVMe speeds, and need to keep your starting costs as low as possible. <br><br>Choose <strong>GoDaddy</strong> if you are a local business owner who is willing to pay a slight premium to have everything under one roof and the peace of mind of 24/7 phone support.</p>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button btn-hostinger" target="_blank" rel="noopener noreferrer">View Hostinger Plans</a>
+            <a href="https://www.godaddy.com" class="cta-button btn-godaddy" target="_blank" rel="noopener noreferrer">View GoDaddy Plans</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

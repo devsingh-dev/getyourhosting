@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Reseller Hosting Providers | Hosting Comparison</title>
+     <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        /* CSS Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f3ff; /* Very light purple background */
+            color: #334155;
+            line-height: 1.6;
+            padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* Hero Section */
+        .reseller-hero {
+            background: linear-gradient(135deg, #4c1d95, #2e1065);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .reseller-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ede9fe;
+        }
+
+        .reseller-hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto;
+            color: #c4b5fd;
+        }
+
+        /* Main Content Container */
+        .content-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Educational Section */
+        .edu-section {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            border-top: 4px solid #7c3aed;
+        }
+
+        .edu-section h2 {
+            color: #5b21b6;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 2px solid #ede9fe;
+            padding-bottom: 10px;
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 25px;
+        }
+
+        .edu-box h3 {
+            color: #1e293b;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Top 5 Ranked List */
+        .ranking-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ranking-header h2 {
+            font-size: 2.5rem;
+            color: #0f172a;
+        }
+
+        .top5-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ranked-card {
+            display: flex;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .ranked-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(124, 58, 237, 0.1);
+            border-color: #7c3aed;
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 45px;
+            height: 45px;
+            background: #7c3aed;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Gold styling for Rank #1 */
+        .ranked-card:nth-child(1) { 
+            border: 2px solid #fbbf24; 
+        }
+        .ranked-card:nth-child(1) .rank-badge { 
+            background: #fbbf24; 
+            color: #78350f; 
+            box-shadow: 0 4px 6px rgba(251, 191, 36, 0.4); 
+        }
+
+        .provider-info {
+            flex: 1;
+        }
+
+        .provider-logo-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .hardware-specs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .spec-tag {
+            background: #f5f3ff;
+            border: 1px solid #ede9fe;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #6d28d9;
+            font-weight: 600;
+        }
+
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .pros, .cons { margin: 0; }
+        .pros strong { color: #16a34a; }
+        .cons strong { color: #dc2626; }
+
+        .action-section {
+            text-align: center;
+            min-width: 220px;
+            border-left: 2px dashed #e2e8f0;
+            padding-left: 30px;
+        }
+
+        .price-start {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .main-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin: 5px 0 20px 0;
+        }
+
+        .main-price span {
+            font-size: 1rem;
+            font-weight: normal;
+            color: #64748b;
+        }
+
+        .btn-visit {
+            display: block;
+            background: #7c3aed;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-visit:hover { 
+            background: #5b21b6; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .reseller-hero h1 { font-size: 2.2rem; }
+            .ranked-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .action-section {
+                border-left: none;
+                border-top: 2px dashed #e2e8f0;
+                padding-left: 0;
+                padding-top: 25px;
+                width: 100%;
+                text-align: left;
+            }
+            .pros-cons-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+ <div id="navbar-placeholder"></div>
+    <header class="reseller-hero">
+        <h1>Start Your Own Hosting Business</h1>
+        <p>White-label solutions for agencies and entrepreneurs. Compare the best Reseller Hosting plans to host your clients with maximum profit.</p>
+    </header>
+
+    <main class="content-container">
+        <section class="edu-section">
+            <h2>What is Reseller Hosting?</h2>
+            <p>Reseller hosting allows you to purchase hosting resources (disk space and bandwidth) in bulk from a parent provider, and then divide and sell them to your own clients. You act as the hosting company, with your own brand name and pricing, while the parent company manages the physical server hardware.</p>
+            
+            <div class="edu-grid">
+                <div class="edu-box">
+                    <h3>💼 Who is it for?</h3>
+                    <p>Web design agencies, developers, and freelancers who manage multiple client websites and want to earn recurring monthly revenue by offering them hosting services.</p>
+                </div>
+                <div class="edu-box">
+                    <h3>⚙️ Essential Features to Look For</h3>
+                    <p>Always look for <strong>100% White-Labeling</strong> (so your clients don't see the parent company), a free billing software like <strong>WHMCS or Blesta</strong>, and a solid control panel like <strong>WHM/cPanel</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ranking-header">
+            <h2>Top 5 Reseller Hosting Providers (2026)</h2>
+            <p>Ranked based on white-label features, server speed, account limits, and profitability.</p>
+        </section>
+
+        <div class="top5-list">
+            
+            <article class="ranked-card">
+                <div class="rank-badge">1</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">Provider A (Best Overall Reseller)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">Free WHMCS License</span>
+                        <span class="spec-tag">100% White-Label</span>
+                        <span class="spec-tag">Unlimited cPanel Accounts</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Everything you need to start an agency, free daily backups.</p>
+                        <p class="cons"><strong>Cons:</strong> Introductory pricing increases upon renewal.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Starting from</div>
+                    <div class="main-price">$19.99<span>/mo</span></div>
+                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">2</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">Provider B (Best for High Speed)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">LiteSpeed Web Server</span>
+                        <span class="spec-tag">NVMe Storage</span>
+                        <span class="spec-tag">Free Migrations</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Insanely fast page loads, great for hosting heavy WordPress client sites.</p>
+                        <p class="cons"><strong>Cons:</strong> Limits the number of client accounts you can create.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Starting from</div>
+                    <div class="main-price">$24.00<span>/mo</span></div>
+                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">3</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">Provider C (Best Budget Option)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">Affordable Pricing</span>
+                        <span class="spec-tag">Free SSL Certificates</span>
+                        <span class="spec-tag">Custom Nameservers</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Very cheap to get started, perfect for new freelancers.</p>
+                        <p class="cons"><strong>Cons:</strong> Billing software (WHMCS) is not included for free.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Starting from</div>
+                    <div class="main-price">$11.95<span>/mo</span></div>
+                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">4</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">Provider D (Best Cloud Reseller)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">Cloud Infrastructure</span>
+                        <span class="spec-tag">Auto-Scaling</span>
+                        <span class="spec-tag">Dedicated IP included</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> High redundancy; if one server fails, another takes over.</p>
+                        <p class="cons"><strong>Cons:</strong> Interface is slightly complex for beginners.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Starting from</div>
+                    <div class="main-price">$29.00<span>/mo</span></div>
+                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
+                </div>
+            </article>
+
+            <article class="ranked-card">
+                <div class="rank-badge">5</div>
+                <div class="provider-info">
+                    <div class="provider-logo-name">Provider E (Best for VPS Reselling)</div>
+                    <div class="hardware-specs">
+                        <span class="spec-tag">Resell VPS Instances</span>
+                        <span class="spec-tag">Root Access</span>
+                        <span class="spec-tag">API Access</span>
+                    </div>
+                    <div class="pros-cons-grid">
+                        <p class="pros"><strong>Pros:</strong> Allows you to sell entire virtual servers, not just shared spaces.</p>
+                        <p class="cons"><strong>Cons:</strong> Requires technical knowledge to support your clients.</p>
+                    </div>
+                </div>
+                <div class="action-section">
+                    <div class="price-start">Starting from</div>
+                    <div class="main-price">$45.00<span>/mo</span></div>
+                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+        <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+
+</body>
+</html>

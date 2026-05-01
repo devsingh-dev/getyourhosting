@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostinger vs MilesWeb for Beginners | Web Hosting Comparison</title>
+    <link rel="stylesheet" href="/styles/styles.css"> 
+    <style>
+        /* CSS Variables */
+        :root {
+            --text-main: #222222;
+            --text-light: #555555;
+            --bg-color: #f7f9fc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --hostinger-color: #673de6; /* Hostinger Purple */
+            --milesweb-color: #ff5c00; /* MilesWeb Orange */
+            --success-color: #10b981;
+        }
+
+        /* Basic Reset & Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            padding-top: 80px; /* Navbar gap */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Typography */
+        h1 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .hostinger-title { color: var(--hostinger-color); }
+        .milesweb-title { color: var(--milesweb-color); }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feature Cards with Hover Effect */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Brand Specific Card Styles */
+        .card-hostinger { border-top: 4px solid var(--hostinger-color); }
+        .card-hostinger h3 { color: var(--hostinger-color); }
+        
+        .card-milesweb { border-top: 4px solid var(--milesweb-color); }
+        .card-milesweb h3 { color: var(--milesweb-color); }
+
+        .number-badge {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            color: white;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .badge-hostinger { background-color: var(--hostinger-color); }
+        .badge-milesweb { background-color: var(--milesweb-color); }
+
+        /* Final Verdict & CTA */
+        .verdict {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: block;
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-hostinger { background-color: var(--hostinger-color); }
+        .btn-hostinger:hover { background-color: #5b36cc; transform: translateY(-2px); }
+
+        .btn-milesweb { background-color: var(--milesweb-color); }
+        .btn-milesweb:hover { background-color: #e65300; transform: translateY(-2px); }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 { font-size: 2rem; }
+            .cta-container { flex-direction: column; width: 100%; }
+            .cta-button { text-align: center; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Hostinger vs MilesWeb: <br>Which Should a Beginner Choose?</h1>
+            <p style="text-align: center; font-size: 1.1rem;">A battle between a massive global giant and a highly affordable local favorite. Here are 5 factual reasons to choose each platform.</p>
+        </header>
+
+        <!-- HOSTINGER SECTION -->
+        <h2 class="hostinger-title">5 Reasons to Choose Hostinger</h2>
+        <p>Best for beginners who want a globally recognized brand, a modern custom dashboard, and built-in AI tools.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">1</div>
+                <h3>Beginner-Friendly hPanel</h3>
+                <p>Instead of the traditional, overwhelming cPanel, Hostinger built its own custom "hPanel". It features large icons, clean menus, and makes managing domains and installing WordPress incredibly easy for non-tech users.</p>
+            </div>
+            
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">2</div>
+                <h3>Built-in AI Website Builder</h3>
+                <p>If WordPress seems too complicated, Hostinger includes their proprietary AI Website Builder. You just type a description of your business, and the AI generates a fully coded, responsive website in minutes.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">3</div>
+                <h3>Massive Global Reach</h3>
+                <p>Hostinger is a global giant with data centers all over the world. They also have deep integration with Cloudflare CDN, ensuring your website loads lightning-fast no matter where your audience lives.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">4</div>
+                <h3>LiteSpeed & NVMe Technology</h3>
+                <p>Even on their budget-friendly plans, Hostinger utilizes LiteSpeed Web Servers and modern NVMe SSD storage. This combination delivers incredibly fast page loading speeds, outperforming traditional Apache servers.</p>
+            </div>
+
+            <div class="feature-card card-hostinger">
+                <div class="number-badge badge-hostinger">5</div>
+                <h3>Seamless All-in-One Dashboard</h3>
+                <p>Hostinger provides an incredibly unified experience. Buying a domain, setting up professional emails, claiming your free SSL, and launching a site all happen effortlessly within one single, modern interface.</p>
+            </div>
+        </section>
+
+        <!-- MILESWEB SECTION -->
+        <h2 class="milesweb-title">5 Reasons to Choose MilesWeb</h2>
+        <p>Best for Indian beginners and local businesses who want extremely affordable pricing, local data centers, and dedicated hands-on support.</p>
+        
+        <section class="features-grid">
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">1</div>
+                <h3>Incredible Value for Money</h3>
+                <p>MilesWeb offers some of the most budget-friendly introductory plans in the market. Even on their base tier, they include premium features like SSD storage and free SSL that competitors sometimes charge extra for.</p>
+            </div>
+            
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">2</div>
+                <h3>Local Data Centers (India)</h3>
+                <p>If your target audience is entirely in India, MilesWeb operates local data centers (like in Mumbai). Hosting your website closer to your visitors ensures significantly faster load times and better local SEO rankings.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">3</div>
+                <h3>Free Website Migration</h3>
+                <p>If you already have a website on another host and want to switch, MilesWeb’s technical team will migrate your entire website, emails, and databases to their servers completely free of charge, saving you hours of headache.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">4</div>
+                <h3>Highly Accessible Support</h3>
+                <p>MilesWeb is famous for its localized customer service. They offer lightning-fast support via live chat, email, and often phone/WhatsApp. For a beginner stuck on a technical issue, this instant help is invaluable.</p>
+            </div>
+
+            <div class="feature-card card-milesweb">
+                <div class="number-badge badge-milesweb">5</div>
+                <h3>Industry Standard cPanel</h3>
+                <p>Unlike Hostinger's custom dashboard, MilesWeb uses the traditional, industry-standard cPanel. While it looks a bit older, 90% of the internet's hosting tutorials are based on cPanel, making it very easy to find help online.</p>
+            </div>
+        </section>
+
+        <!-- Final Verdict -->
+        <h2>Final Verdict</h2>
+        <div class="verdict">
+            <p><strong>Who wins? It depends on what you value most.</strong> <br><br>Choose <strong>Hostinger</strong> if you want a modern, cutting-edge interface (hPanel), built-in AI tools, and a global infrastructure that handles international traffic effortlessly. <br><br>Choose <strong>MilesWeb</strong> if you are strictly on a budget, your audience is primarily in India, and you want the comfort of accessible, localized support along with free hands-on website migration.</p>
+        </div>
+
+        <div class="cta-container">
+            <a href="#" class="cta-button btn-hostinger" target="_blank" rel="noopener noreferrer">View Hostinger Plans</a>
+            <a href="#" class="cta-button btn-milesweb" target="_blank" rel="noopener noreferrer">View MilesWeb Plans</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>

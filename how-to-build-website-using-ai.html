@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Build a Live Website Using AI Tools - Getyourhosting</title>
+     <link rel="stylesheet" href="/styles/styles.css"> 
+    <style>
+        /* === RESET & BASE STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc; /* Light background */
+            color: #334155;
+            line-height: 1.6;
+             padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* === ARTICLE CONTAINER === */
+        .article-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* === HEADER SECTION === */
+        .article-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .article-header h1 {
+            color: #0f172a; /* Deep Navy */
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .article-header p {
+            color: #64748b;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === STEPS GRID === */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        /* === STEP CARDS === */
+        .step-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #673de6;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateX(10px); /* Smooth slide effect */
+        }
+
+        .step-number {
+            background-color: #f1f5f9;
+            color: #673de6;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .step-title {
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .step-text {
+            color: #475569;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* === PROMPT BOX === */
+        .prompt-box {
+            background-color: #0f172a;
+            color: #10b981; /* Matrix green text */
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+        }
+
+        .prompt-label {
+            display: block;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            .step-card {
+                padding: 20px;
+            }
+            .step-card:hover {
+                transform: translateY(-5px); /* Vertical lift on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="article-container">
+        
+        <header class="article-header">
+            <h1>Build a Live Website Using AI Tools</h1>
+            <p>No coding experience? No problem! Learn how to generate clean HTML/CSS using basic AI prompts and launch your website easily.</p>
+        </header>
+
+        <div class="steps-grid">
+            
+            <div class="step-card">
+                <div class="step-number">Step 1</div>
+                <h2 class="step-title">Write Clear AI Prompts</h2>
+                <p class="step-text">Think of AI as your developer assistant. The clearer your instructions, the better the generated code will be. Use tools like ChatGPT or Gemini and describe your required layout section by section.</p>
+                <div class="prompt-box">
+                    <span class="prompt-label">Example Prompt:</span>
+                    "Write HTML and CSS code for a modern web hosting comparison website. Include a dark navy blue navbar, a hero section, and 3 pricing tables. The code should be responsive and contained in a single file."
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">Step 2</div>
+                <h2 class="step-title">Copy & Test the Code</h2>
+                <p class="step-text">Once the AI generates the code, copy it to your clipboard. Download a free code editor like Visual Studio Code (VS Code) and create a new file named <code>index.html</code>. Paste your code there and double-click the file to open it in your web browser.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">Step 3</div>
+                <h2 class="step-title">Make Custom Refinements</h2>
+                <p class="step-text">AI rarely gets it perfect on the first try. If you want to change specific colors, adjust spacing, or add hover effects, simply go back to the AI and ask for exact refinements.</p>
+                <div class="prompt-box">
+                    <span class="prompt-label">Refinement Prompt:</span>
+                    "Change the button colors in the previous code to purple (#673de6) and add a smooth lifting hover effect to the pricing cards."
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">Step 4</div>
+                <h2 class="step-title">Host Your Website Live</h2>
+                <p class="step-text">When your code looks exactly how you want it, it is time to make it live on the internet. You will need a reliable Web Hosting plan and a custom Domain name. Head over to our <a href="#" style="color: #673de6; font-weight: 600;">Comparison Section</a> to find the perfect hosting provider for your budget.</p>
+            </div>
+
+        </div>
+
+    </div>
+<footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+</body>
+</html>

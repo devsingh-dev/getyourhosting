@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress vs Custom HTML - Getyourhosting</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        /* === RESET & BASE STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+             padding-top: 80px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* === ARTICLE CONTAINER === */
+        .article-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* === HEADER SECTION === */
+        .article-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .article-header h1 {
+            color: #0f172a;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .article-header p {
+            color: #64748b;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === COMPARISON GRID === */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* === OPTION CARDS === */
+        .tech-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border-top: 6px solid #e2e8f0;
+        }
+
+        .tech-card.html-card {
+            border-top-color: #10b981; /* Green for HTML */
+        }
+
+        .tech-card.wp-card {
+            border-top-color: #3b82f6; /* Blue for WordPress */
+        }
+
+        /* Hover Effect - Lift and Shadow */
+        .tech-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .tech-title {
+            color: #0f172a;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .tech-desc {
+            color: #64748b;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* === PROS & CONS LIST === */
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            color: #475569;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .feature-list.cons-list li::before {
+            content: '✗';
+            color: #ef4444; /* Red for cons */
+        }
+
+        /* === VERDICT SECTION === */
+        .verdict-box {
+            background-color: #0f172a;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+        }
+
+        .verdict-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #673de6; /* Purple Accent */
+        }
+
+        .verdict-box p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #673de6;
+            color: white;
+            padding: 14px 35px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #5b36cc;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr; /* Stack cards on mobile */
+                gap: 30px;
+            }
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+            .tech-card {
+                padding: 30px 20px;
+            }
+            .tech-card:hover {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+     <div id="navbar-placeholder"></div>
+
+    <div class="article-container">
+        
+        <header class="article-header">
+            <h1>WordPress vs. Custom HTML</h1>
+            <p>Which platform is the best fit for your new project? Discover the pros and cons of both in this simple, side-by-side comparison.</p>
+        </header>
+
+        <div class="comparison-grid">
+            
+            <div class="tech-card html-card">
+                <div class="card-icon">⚡</div>
+                <h2 class="tech-title">Custom HTML / CSS</h2>
+                <p class="tech-desc">Building a website by writing code directly without a Content Management System (CMS). The best choice for portfolios, landing pages, and static sites.</p>
+                
+                <h4 style="margin-bottom: 10px; color: #0f172a;">Pros:</h4>
+                <ul class="feature-list">
+                    <li><strong>Super Fast:</strong> Pages load instantly without database queries.</li>
+                    <li><strong>100% Secure:</strong> No backend or vulnerable plugins for hackers to exploit.</li>
+                    <li><strong>Free Hosting:</strong> Can be easily hosted for free on platforms like GitHub Pages.</li>
+                    <li><strong>Full Control:</strong> You have absolute control over every pixel of the design.</li>
+                </ul>
+
+                <h4 style="margin-bottom: 10px; color: #0f172a;">Cons:</h4>
+                <ul class="feature-list cons-list">
+                    <li>Requires editing code directly to update content or text.</li>
+                    <li>Publishing daily blog posts is difficult and time-consuming.</li>
+                </ul>
+            </div>
+
+            <div class="tech-card wp-card">
+                <div class="card-icon">🌍</div>
+                <h2 class="tech-title">WordPress (CMS)</h2>
+                <p class="tech-desc">The world's most popular platform. The easiest way to build dynamic websites, blogs, and online stores without writing code.</p>
+                
+                <h4 style="margin-bottom: 10px; color: #0f172a;">Pros:</h4>
+                <ul class="feature-list">
+                    <li><strong>Beginner Friendly:</strong> Add text and images just like using a Word document.</li>
+                    <li><strong>Plugins & Themes:</strong> Add SEO, forms, or E-commerce features with a single click.</li>
+                    <li><strong>Blogging Ready:</strong> Publishing and organizing new articles is effortless.</li>
+                    <li><strong>No Coding Required:</strong> Manage your entire site from a visual dashboard.</li>
+                </ul>
+
+                <h4 style="margin-bottom: 10px; color: #0f172a;">Cons:</h4>
+                <ul class="feature-list cons-list">
+                    <li>Using too many plugins can significantly slow down your website.</li>
+                    <li>Requires constant software and plugin updates to maintain security.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="verdict-box">
+            <h3>Final Verdict: Which Should You Choose?</h3>
+            <p>If you are building a fast comparison site, a portfolio, or an AI-generated layout that doesn't require frequent daily updates, <strong>Custom HTML</strong> is the best and most secure option. However, if you plan to launch a regular Blog or an E-commerce store where you need to manage dynamic content, choose <strong>WordPress</strong>.</p>
+            <a href="#" class="cta-btn">Find the Best Hosting for Your Choice</a>
+        </div>
+
+    </div>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+<script src="/js/script.js"></script>
+
+</body>
+</html>
