@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 5 Reseller Hosting Providers | Hosting Comparison</title>
-     <link rel="stylesheet" href="styles/styles.css">
+    <title>Best Reseller Hosting Providers | Hosting Comparison</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV26XW6J3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TRV26XW6J3');
+    </script>
     <style>
         /* CSS Reset & General Styles */
         * {
@@ -15,10 +24,10 @@
         }
 
         body {
-            background-color: #f5f3ff; /* Very light purple background */
+            background-color: #f5f3ff;
             color: #334155;
             line-height: 1.6;
-            padding-top: 80px; /* Navbar ke niche content ke liye gap */
+            padding-top: 80px;
         }
 
         /* Hero Section */
@@ -81,7 +90,7 @@
             font-size: 1.3rem;
         }
 
-        /* Top 5 Ranked List */
+        /* Section Header */
         .ranking-header {
             text-align: center;
             margin-bottom: 40px;
@@ -90,164 +99,176 @@
         .ranking-header h2 {
             font-size: 2.5rem;
             color: #0f172a;
+            margin-bottom: 10px;
+        }
+        
+        .ranking-header p {
+            font-size: 1.1rem;
+            color: #64748b;
         }
 
-        .top5-list {
+        /* Use-Case Cards CSS */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .use-case-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
-            gap: 30px;
-        }
-
-        .ranked-card {
-            display: flex;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            padding: 30px;
             position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
-            align-items: center;
-            gap: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .ranked-card:hover {
+        .use-case-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(124, 58, 237, 0.1);
+            box-shadow: 0 12px 20px rgba(124, 58, 237, 0.15);
             border-color: #7c3aed;
         }
 
-        .rank-badge {
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            width: 45px;
-            height: 45px;
-            background: #7c3aed;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(124, 58, 237, 0.4);
-        }
+        /* Brand Colors for Visual Pop */
+        .brand-milesweb { border-top: 4px solid #ef4444; }
+        .brand-hostinger { border-top: 4px solid #7c3aed; } 
+        .brand-godaddy { border-top: 4px solid #10b981; }
+        .brand-bluehost { border-top: 4px solid #3b82f6; }
 
-        /* Gold styling for Rank #1 */
-        .ranked-card:nth-child(1) { 
-            border: 2px solid #fbbf24; 
-        }
-        .ranked-card:nth-child(1) .rank-badge { 
-            background: #fbbf24; 
-            color: #78350f; 
-            box-shadow: 0 4px 6px rgba(251, 191, 36, 0.4); 
-        }
-
-        .provider-info {
-            flex: 1;
-        }
-
-        .provider-logo-name {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #0f172a;
-            margin-bottom: 12px;
-        }
-
-        .hardware-specs {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 18px;
-            flex-wrap: wrap;
-        }
-
-        .spec-tag {
-            background: #f5f3ff;
-            border: 1px solid #ede9fe;
+        .card-badge {
+            display: inline-block;
             padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
             border-radius: 20px;
-            font-size: 0.9rem;
+            background: #f5f3ff;
             color: #6d28d9;
-            font-weight: 600;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            border: 1px solid #ede9fe;
         }
 
-        .pros-cons-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            font-size: 0.95rem;
+        .disclaimer-badge {
+            background: #fee2e2;
+            color: #dc2626;
+            border-color: #fecaca;
         }
 
-        .pros, .cons { margin: 0; }
-        .pros strong { color: #16a34a; }
-        .cons strong { color: #dc2626; }
-
-        .action-section {
-            text-align: center;
-            min-width: 220px;
-            border-left: 2px dashed #e2e8f0;
-            padding-left: 30px;
-        }
-
-        .price-start {
-            font-size: 0.95rem;
-            color: #64748b;
-        }
-
-        .main-price {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .use-case-card h3 {
+            font-size: 1.6rem;
+            margin: 0 0 10px 0;
             color: #0f172a;
-            margin: 5px 0 20px 0;
         }
 
-        .main-price span {
-            font-size: 1rem;
-            font-weight: normal;
+        .target-user {
+            font-size: 0.95rem;
+            color: #059669; 
+            background: #ecfdf5;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #d1fae5;
+        }
+
+        .target-user strong {
+            color: #047857;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1; 
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .feature-list li {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Pricing Block Integration */
+        .price-block {
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            text-align: center;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .price-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .price-value span {
+            font-size: 0.9rem;
+            font-weight: 500;
             color: #64748b;
         }
 
-        .btn-visit {
+        /* Buttons */
+        .cta-btn {
             display: block;
-            background: #7c3aed;
+            text-align: center;
+            background: #7c3aed; 
             color: white;
-            padding: 14px 25px;
             text-decoration: none;
+            padding: 14px;
             border-radius: 6px;
             font-weight: bold;
             transition: background 0.3s;
             width: 100%;
         }
 
-        .btn-visit:hover { 
-            background: #5b21b6; 
+        .cta-btn:hover { background: #5b21b6; }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #cbd5e1;
         }
+
+        .btn-secondary:hover { background: #e2e8f0; }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .reseller-hero h1 { font-size: 2.2rem; }
-            .ranked-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-            .action-section {
-                border-left: none;
-                border-top: 2px dashed #e2e8f0;
-                padding-left: 0;
-                padding-top: 25px;
-                width: 100%;
-                text-align: left;
-            }
-            .pros-cons-grid { grid-template-columns: 1fr; }
+            .cards-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
- <div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
     <header class="reseller-hero">
         <h1>Start Your Own Hosting Business</h1>
-        <p>White-label solutions for agencies and entrepreneurs. Compare the best Reseller Hosting plans to host your clients with maximum profit.</p>
+        <p>White-label solutions for agencies and entrepreneurs. Compare the best Reseller platforms to host your clients with maximum profit.</p>
     </header>
 
     <main class="content-container">
@@ -262,129 +283,103 @@
                 </div>
                 <div class="edu-box">
                     <h3>⚙️ Essential Features to Look For</h3>
-                    <p>Always look for <strong>100% White-Labeling</strong> (so your clients don't see the parent company), a free billing software like <strong>WHMCS or Blesta</strong>, and a solid control panel like <strong>WHM/cPanel</strong>.</p>
+                    <p>Always look for <strong>100% White-Labeling</strong> (so your clients don't see the parent company), client billing software compatibility, and an easy control panel to manage sub-accounts.</p>
                 </div>
             </div>
         </section>
 
-        <section class="ranking-header">
-            <h2>Top 5 Reseller Hosting Providers (2026)</h2>
-            <p>Ranked based on white-label features, server speed, account limits, and profitability.</p>
+        <section class="use-case-comparison">
+            <div class="ranking-header">
+                <h2>Which Reseller Platform is Right for You?</h2>
+                <p>Choose the platform that perfectly matches your business model and technical skills.</p>
+            </div>
+
+            <div class="cards-grid">
+                
+                <!-- CARD 1: MILESWEB -->
+                <div class="use-case-card brand-milesweb">
+                    <div class="card-badge">The Traditional Reseller</div>
+                    <h3> <span class="logo-text"><img src="Images/MilesWeb Logo-Full-color.png" width="200"></span>
+      </h3>
+                    <p class="target-user"><strong>Best for:</strong> Starting your own hosting company.</p>
+                    <p class="description">If you want to build your own brand, set your own pricing, and have full control over WHM and cPanel, this pure white-label solution is the perfect fit.</p>
+                    <ul class="feature-list">
+                        <li>✅ 100% White-Label Branding</li>
+                        <li>✅ Set your own profit margins</li>
+                        <li>✅ Full WHM & cPanel control</li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-label">Geek Plan Starting At</span>
+                        <span class="price-value">₹699<span>/mo</span></span>
+                    </div>
+                    <a href="https://www.milesweb.com" target="_blank" rel="nofollow" class="btn affiliate-link" data-provider="milesweb">Get Started</a>
+      </div>
+
+                <!-- CARD 2: HOSTINGER -->
+                <div class="use-case-card brand-hostinger">
+                    <div class="card-badge">The Agency Solution</div>
+                    <h3> <span class="logo-text"><img src="Images/Hostinger-logo-primary.png" width="200"></span>
+          </h3>
+                    <p class="target-user"><strong>Best for:</strong> Web Designers & Freelancers.</p>
+                    <p class="description">If you build websites for clients and want to provide them with a clean, unbranded dashboard without the headache of managing servers, this is ideal.</p>
+                    <ul class="feature-list">
+                        <li>✅ Clean, Unbranded Dashboard</li>
+                        <li>✅ Easy client access management</li>
+                        <li>✅ Zero server maintenance</li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-label">Agency Plan Starting At</span>
+                        <span class="price-value">₹699<span>/mo</span></span>
+                    </div>
+                     <a href="https://www.hostinger.in" target="_blank" rel="nofollow" class="btn affiliate-link" data-provider="hostinger">Get Started</a>
+      </div>
+
+                <!-- CARD 3: GODADDY -->
+                <div class="use-case-card brand-godaddy">
+                    <div class="card-badge">The Ready-Made Store</div>
+                    <h3>
+                <span class="logo-text"><img src="Images/GoDaddy_LockUp_RGB_Teal.png" width="200"></span>
+        </h3>
+                    <p class="target-user"><strong>Best for:</strong> Hands-off selling.</p>
+                    <p class="description">If you don't want to worry about website design, payment gateways, or tech support. It gives you a ready-made white-label store to sell directly.</p>
+                    <ul class="feature-list">
+                        <li>✅ Pre-built White-Label Store</li>
+                        <li>✅ Built-in payment processing</li>
+                        <li>✅ GoDaddy handles tech support</li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-label">Basic Reseller Starting At</span>
+                        <span class="price-value">₹2,699<span>/mo</span></span>
+                    </div>
+                    <a href="https://www.godaddy.com" class="cta-btn" target="_blank" rel="noopener noreferrer">View GoDaddy Reseller</a>
+                </div>
+
+                <!-- CARD 4: BLUEHOST -->
+                <div class="use-case-card brand-bluehost">
+                    <div class="card-badge disclaimer-badge">The Honest Disclaimer</div>
+                    <h3>  <span class="logo-text"><img src="Images/Blue_Host_idSiPtxwZG_5.png" width="200"></span>
+         </h3>
+                    <p class="target-user"><strong>Best for:</strong> End-Users (Not for Resellers).</p>
+                    <p class="description">Transparency is key! Bluehost does not offer direct reseller hosting. If you want to stay in their ecosystem, you should use ResellerClub.</p>
+                    <ul class="feature-list">
+                        <li>❌ No direct WHM Reseller plans</li>
+                        <li>✅ Great for individual VPS needs</li>
+                        <li>✅ Try ResellerClub instead</li>
+                    </ul>
+                    <div class="price-block">
+                        <span class="price-label">Standard VPS Starting At</span>
+                        <span class="price-value">₹1,649<span>/mo</span></span>
+                    </div>
+                    <a href="https://www.bluehost.in/?irclickid=YOUR_AFFILIATE_ID" class="cta-btn btn-secondary" target="_blank" rel="noopener noreferrer">Visit ResellerClub</a>
+                </div>
+
+            </div>
         </section>
 
-        <div class="top5-list">
-            
-            <article class="ranked-card">
-                <div class="rank-badge">1</div>
-                <div class="provider-info">
-                    <div class="provider-logo-name">Provider A (Best Overall Reseller)</div>
-                    <div class="hardware-specs">
-                        <span class="spec-tag">Free WHMCS License</span>
-                        <span class="spec-tag">100% White-Label</span>
-                        <span class="spec-tag">Unlimited cPanel Accounts</span>
-                    </div>
-                    <div class="pros-cons-grid">
-                        <p class="pros"><strong>Pros:</strong> Everything you need to start an agency, free daily backups.</p>
-                        <p class="cons"><strong>Cons:</strong> Introductory pricing increases upon renewal.</p>
-                    </div>
-                </div>
-                <div class="action-section">
-                    <div class="price-start">Starting from</div>
-                    <div class="main-price">$19.99<span>/mo</span></div>
-                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
-                </div>
-            </article>
-
-            <article class="ranked-card">
-                <div class="rank-badge">2</div>
-                <div class="provider-info">
-                    <div class="provider-logo-name">Provider B (Best for High Speed)</div>
-                    <div class="hardware-specs">
-                        <span class="spec-tag">LiteSpeed Web Server</span>
-                        <span class="spec-tag">NVMe Storage</span>
-                        <span class="spec-tag">Free Migrations</span>
-                    </div>
-                    <div class="pros-cons-grid">
-                        <p class="pros"><strong>Pros:</strong> Insanely fast page loads, great for hosting heavy WordPress client sites.</p>
-                        <p class="cons"><strong>Cons:</strong> Limits the number of client accounts you can create.</p>
-                    </div>
-                </div>
-                <div class="action-section">
-                    <div class="price-start">Starting from</div>
-                    <div class="main-price">$24.00<span>/mo</span></div>
-                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
-                </div>
-            </article>
-
-            <article class="ranked-card">
-                <div class="rank-badge">3</div>
-                <div class="provider-info">
-                    <div class="provider-logo-name">Provider C (Best Budget Option)</div>
-                    <div class="hardware-specs">
-                        <span class="spec-tag">Affordable Pricing</span>
-                        <span class="spec-tag">Free SSL Certificates</span>
-                        <span class="spec-tag">Custom Nameservers</span>
-                    </div>
-                    <div class="pros-cons-grid">
-                        <p class="pros"><strong>Pros:</strong> Very cheap to get started, perfect for new freelancers.</p>
-                        <p class="cons"><strong>Cons:</strong> Billing software (WHMCS) is not included for free.</p>
-                    </div>
-                </div>
-                <div class="action-section">
-                    <div class="price-start">Starting from</div>
-                    <div class="main-price">$11.95<span>/mo</span></div>
-                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
-                </div>
-            </article>
-
-            <article class="ranked-card">
-                <div class="rank-badge">4</div>
-                <div class="provider-info">
-                    <div class="provider-logo-name">Provider D (Best Cloud Reseller)</div>
-                    <div class="hardware-specs">
-                        <span class="spec-tag">Cloud Infrastructure</span>
-                        <span class="spec-tag">Auto-Scaling</span>
-                        <span class="spec-tag">Dedicated IP included</span>
-                    </div>
-                    <div class="pros-cons-grid">
-                        <p class="pros"><strong>Pros:</strong> High redundancy; if one server fails, another takes over.</p>
-                        <p class="cons"><strong>Cons:</strong> Interface is slightly complex for beginners.</p>
-                    </div>
-                </div>
-                <div class="action-section">
-                    <div class="price-start">Starting from</div>
-                    <div class="main-price">$29.00<span>/mo</span></div>
-                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
-                </div>
-            </article>
-
-            <article class="ranked-card">
-                <div class="rank-badge">5</div>
-                <div class="provider-info">
-                    <div class="provider-logo-name">Provider E (Best for VPS Reselling)</div>
-                    <div class="hardware-specs">
-                        <span class="spec-tag">Resell VPS Instances</span>
-                        <span class="spec-tag">Root Access</span>
-                        <span class="spec-tag">API Access</span>
-                    </div>
-                    <div class="pros-cons-grid">
-                        <p class="pros"><strong>Pros:</strong> Allows you to sell entire virtual servers, not just shared spaces.</p>
-                        <p class="cons"><strong>Cons:</strong> Requires technical knowledge to support your clients.</p>
-                    </div>
-                </div>
-                <div class="action-section">
-                    <div class="price-start">Starting from</div>
-                    <div class="main-price">$45.00<span>/mo</span></div>
-                    <a href="#" class="btn-visit" target="_blank" rel="noopener noreferrer">View Plans</a>
-                </div>
-            </article>
-
-        </div>
     </main>
-        <footer>
+    <footer>
         <div id="footer-placeholder"></div>
     </footer>
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

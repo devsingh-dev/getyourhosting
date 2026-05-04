@@ -29,3 +29,4 @@ window.onload = () => {
     loadComponent('navbar-placeholder', 'navbar.html');
     loadComponent('footer-placeholder', 'footer.html');
 };
+
