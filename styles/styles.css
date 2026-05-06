@@ -226,9 +226,22 @@ nav ul ul li a:hover {
     }
 
     /* Mobile par Main menu par hover karne se Dropdown khulega */
-    nav ul li:hover > ul {
-        display: flex;
+  @media screen and (max-width: 768px) {
+    /* Purana hover wala code (nav ul li:hover > ul) hata dein */
+
+    /* Naya code: Default dropdown hide rahega */
+    nav ul ul {
+        display: none !important; 
+        position: static;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
     }
+
+    /* Jab JS 'open' class lagayega tab dropdown dikhega */
+    nav ul li.open > ul {
+        display: flex !important;
+    }
+}
 
     nav ul ul li a {
         padding-left: 40px; 
