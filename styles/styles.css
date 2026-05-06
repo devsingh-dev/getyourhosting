@@ -154,14 +154,11 @@ nav ul ul li a:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 /* =========================================
-   PURE CSS HAMBURGER MENU (NO JS)
+/* =========================================
+   HAMBURGER MENU (JS BASED)
    ========================================= */
 
-/* Desktop par checkbox aur icon hide karein */
-.menu-checkbox {
-    display: none;
-}
-
+/* Desktop par icon hide karein */
 .menu-icon {
     display: none;
     color: white;
@@ -183,16 +180,6 @@ nav ul ul li a:hover {
         display: block;
     }
 
-    /* CSS Content se 'Hamburger' (☰) icon lagana */
-    .menu-icon::before {
-        content: "☰";
-    }
-
-    /* Jab menu khulega tab CSS 'Cross' (✖) icon lagayega */
-    .menu-checkbox:checked + .menu-icon::before {
-        content: "✖";
-    }
-
     /* Main Menu ko vertical slide ke liye set karna */
     nav ul {
         position: absolute;
@@ -207,8 +194,8 @@ nav ul ul li a:hover {
         padding-bottom: 20px;
     }
 
-    /* 🔥 THE MAGIC: Jab checkbox checked ho, toh <ul> ko left: 0 par le aao 🔥 */
-    .menu-checkbox:checked ~ ul {
+    /* 🔥 THE MAGIC: Jab JS 'active' class add karega, toh <ul> left: 0 par aayega 🔥 */
+    nav ul.active {
         left: 0;
     }
 
@@ -220,6 +207,9 @@ nav ul ul li a:hover {
     nav ul li a {
         padding-left: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block; /* Clickable area badhane ke liye */
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     /* Mobile me Dropdown Setup */
@@ -244,6 +234,9 @@ nav ul ul li a:hover {
         padding-left: 40px; 
         font-size: 15px;
     }
+}
+nav ul.active {
+    left: 0 !important;
 }
 /* 3. Hero Section (Improved Spacing) */
 .hero-section {
