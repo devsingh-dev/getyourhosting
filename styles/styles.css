@@ -173,6 +173,7 @@ nav ul ul li a:hover {
 @media screen and (max-width: 768px) {
     nav {
         padding: 0 20px;
+        top : 50px; /* Mobile par navigation top par chipka denge */
     }
 
     /* Mobile par Hamburger Icon show karna */
@@ -191,7 +192,7 @@ nav ul ul li a:hover {
         height: calc(100vh - 70px); 
         transition: 0.4s ease-in-out;
         overflow-y: auto; 
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     /* 🔥 THE MAGIC: Jab JS 'active' class add karega, toh <ul> left: 0 par aayega 🔥 */
@@ -204,12 +205,17 @@ nav ul ul li a:hover {
         text-align: left;
     }
 
+    nav ul a {
+        padding-bottom: 10px;
+        padding-top: 10px  ;
+
+    }
     nav ul li a {
         padding-left: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         display: block; /* Clickable area badhane ke liye */
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     /* Mobile me Dropdown Setup */

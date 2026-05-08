@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Build a Live Website Using AI Tools - Getyourhosting</title>
      <link rel="stylesheet" href="styles/styles.css"> 
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV26XW6J3"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV26XW6J3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -27,7 +26,7 @@
             background-color: #f8fafc; /* Light background */
             color: #334155;
             line-height: 1.6;
-             padding-top: 80px; /* Navbar ke niche content ke liye gap */
+             padding-top: 100px; /* Navbar ke niche content ke liye gap */
         }
 
         /* === ARTICLE CONTAINER === */
@@ -124,6 +123,84 @@
             letter-spacing: 1px;
         }
 
+        /* === NEW: AI BUILDERS AFFILIATE SECTION === */
+        .ai-tools-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 2px dashed #cbd5e1;
+        }
+
+        .ai-tools-section h2 {
+            text-align: center;
+            color: #0f172a;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .ai-tools-section > p {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tool-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            border-color: #673de6;
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .tool-name {
+            font-size: 1.4rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .tool-desc {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 25px;
+        }
+
+        .btn-affiliate {
+            display: block;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .btn-affiliate:hover {
+            opacity: 0.9;
+        }
+
+        .bg-hostinger { background-color: #673de6; }
+        .bg-10web { background-color: #000000; }
+        .bg-wix { background-color: #0088cb; }
+
         /* === RESPONSIVE DESIGN === */
         @media (max-width: 768px) {
             .article-header h1 {
@@ -179,10 +256,40 @@
             <div class="step-card">
                 <div class="step-number">Step 4</div>
                 <h2 class="step-title">Host Your Website Live</h2>
-                <p class="step-text">When your code looks exactly how you want it, it is time to make it live on the internet. You will need a reliable Web Hosting plan and a custom Domain name. Head over to our <a href="#" style="color: #673de6; font-weight: 600;">Comparison Section</a> to find the perfect hosting provider for your budget.</p>
+                <p class="step-text">When your code looks exactly how you want it, it is time to make it live on the internet. You will need a reliable Web Hosting plan and a custom Domain name. Head over to our <a href="compare.html" style="color: #673de6; font-weight: 600;">Comparison Section</a> to find the perfect hosting provider for your budget.</p>
             </div>
 
         </div>
+
+        <section class="ai-tools-section">
+            <h2>Don't want to deal with code?</h2>
+            <p>Use these all-in-one AI Website Builders to generate a fully functional website in 60 seconds.</p>
+            
+            <div class="tools-grid">
+                
+                <div class="tool-card">
+                    <div class="tool-icon">🚀</div>
+                    <div class="tool-name">Hostinger AI Builder</div>
+                    <p class="tool-desc">Describe your business in 3 sentences, and Hostinger's AI will generate a beautiful, responsive website with images and text instantly.</p>
+                    <a href="https://www.hostinger.com/" class="btn-affiliate bg-hostinger" target="_blank" rel="noopener sponsored">Try Hostinger AI</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">⚡</div>
+                    <div class="tool-name">10Web (For WordPress)</div>
+                    <p class="tool-desc">The ultimate AI tool for WordPress. It can automatically recreate any website design you like or build a custom WordPress site from scratch using AI.</p>
+                    <a href="https://www.10web.io/" class="btn-affiliate bg-10web" target="_blank" rel="noopener sponsored">Try 10Web AI</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <div class="tool-name">Wix ADI</div>
+                    <p class="tool-desc">Wix Artificial Design Intelligence asks you a few simple questions and automatically designs a tailor-made website complete with custom layouts.</p>
+                    <a href="https://www.wix.com/adi" class="btn-affiliate bg-wix" target="_blank" rel="noopener sponsored">Try Wix ADI</a>
+                </div>
+
+            </div>
+        </section>
 
     </div>
 <footer>
