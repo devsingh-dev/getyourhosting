@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>VPS Hosting Explained & Compared | GetYourHosting</title>
+    
+    <!-- 1. SEO Meta Tags & Canonical Link -->
+    <meta name="description" content="Learn everything about VPS hosting. Compare the top VPS hosting providers, pricing, features, and performance on GetYourHosting to find your ideal server.">
+    <!-- Exact file name as provided -->
+    <link rel="canonical" href="https://getyourhosting.in/Hosting/vpshosting.html">
+
+    <!-- 2. Schema Markup (JSON-LD) for Article/Guide Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "VPS Hosting Explained & Compared",
+      "name": "VPS Hosting Explained & Compared | GetYourHosting",
+      "description": "Learn everything about VPS hosting. Compare the top VPS hosting providers, pricing, features, and performance.",
+      "url": "https://getyourhosting.in/Hosting/vpshosting.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "GetYourHosting"
+      }
+    }
+    </script>
+
+    <!-- 3. Open Graph (Social Media Tags) -->
+    <meta property="og:site_name" content="GetYourHosting">
+    <meta property="og:title" content="VPS Hosting Explained & Compared | GetYourHosting">
+    <meta property="og:description" content="Learn everything about VPS hosting. Compare the top VPS hosting providers, pricing, features, and performance to find your ideal server.">
+    <meta property="og:image" content="https://getyourhosting.in/Images/social-preview.jpg"> 
+    <meta property="og:url" content="https://getyourhosting.in/Hosting/vpshosting.html">
+    <meta property="og:type" content="article">
+
+    <!-- 4. Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VPS Hosting Explained & Compared | GetYourHosting">
+    <meta name="twitter:description" content="Learn everything about VPS hosting. Compare the top VPS hosting providers, pricing, features, and performance to find your ideal server.">
+    <meta name="twitter:image" content="https://getyourhosting.in/Images/social-preview.jpg">
+
+    <!-- 5. Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="Images/IMG_20260314_093208.jpg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV26XW6J3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TRV26XW6J3');
+    </script>
+    <style>
+        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-color: #0284c7;
+            --secondary-color: #0369a1;
+            --bg-color: #f1f5f9;
+            --text-color: #334155;
+            --white: #ffffff;
+            --accent: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 100px; 
+        }
+
+        /* --- Hero Section --- */
+        .headers1 {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .headers1 h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #e0f2fe;
+        }
+
+        .headers1 p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #94a3b8;
+        }
+
+        /* --- Main Content Container --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* --- Educational Section --- */
+        .info-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .info-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .info-box h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        /* --- Pricing Toggle --- */
+        .pricing-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .toggle-container {
+            background: #e2e8f0;
+            padding: 5px;
+            border-radius: 8px;
+            display: inline-flex;
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* --- Comparison Section --- */
+        .comparison-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .comparison-header h2 {
+            font-size: 2.2rem;
+            color: #0f172a;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .compare-card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+            transition: box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .compare-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .provider-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 15px 10px;
+            background: #f8fafc;
+            border-radius: 5px;
+        }
+
+        .rating {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Price Box Design */
+        .price-box {
+            text-align: center;
+            margin: 15px 0 20px 0;
+            min-height: 50px;
+        }
+
+        .price-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .price-duration {
+            font-size: 1rem;
+            color: #64748b;
+        }
+
+        /* OS Select Dropdown */
+        .os-select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 15px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .os-select:focus {
+            border-color: var(--primary-color);
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 25px;
+            flex-grow: 1; /* Keeps footer buttons aligned */
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: #16a34a;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .pros-cons {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            font-size: 0.85rem;
+        }
+
+        .pros-cons p { margin-bottom: 5px; }
+        .pros { color: #16a34a; }
+        .cons { color: #dc2626; }
+
+        .affiliate-btn {
+            display: block;
+            text-align: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: auto;
+        }
+
+        .affiliate-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Best Choice Badge */
+        .best-choice {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.02);
+        }
+
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .info-section { padding: 20px; }
+            .best-choice { transform: scale(1); }
+        }
+        /* --- Disclaimer Section --- */
+        .disclaimer-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .disclaimer-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--accent); /* Orange accent line */
+            padding: 15px 20px;
+            border-radius: 6px;
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .disclaimer-box strong {
+            color: #475569;
+        }
+    </style>
+<link rel="icon" type="image/png" href="Images/IMG_20260314_093208.jpg"></head>
+<body>
+         <header class="navbar-wrapper">
+        <div class="affiliate-banner-1">
+            <p style="margin: 0; color: #d7dbe0; font-size: 14px; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <strong style="color: #dde2ee; font-weight: 700;">Disclosure:</strong> We may earn a commission when you purchase through our links, at no extra cost to you. 
+                 <a href="../Contact/disclaimer.html" style="color: #0d9488; text-decoration: none; font-weight: 700; margin-left: 8px;">Know More →</a>
+            </p>
+
+        </div>
+
+        <nav class="flex">
+             <a href="../index.html" >
+             <div class="logo" style="display: flex;left:0px; justify-self:center;align-items: center;center; gap: 15px;">
+    
+                  <img src="../Images/IMG_20260314_093208.jpg" alt="Logo" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0, 231, 255, 0.5);">
+    
+                 <span style="color: #ffffff; font-weight: 800; font-size: 18px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 0.5px;">
+                           GetYourHosting
+                 </span>
+
+             </div>
+             </a>
+             <div class="menu-icon" id="hamburger-icon">☰</div>
+                 <ul id="nav-menu"> <!-- Sirf yahan ID rahegi -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Hosting</a>
+                    
+                    <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Hosting/webhosting.html">Web Hosting</a></li>
+                        <li><a href="../Hosting/shared-hosting.html">Shared Hosting</a></li>
+                        <li><a href="../Hosting/vpshosting.html">VPS Hosting</a></li>
+                        <li><a href="../Hosting/dedicatedserver.html">Dedicated Servers</a></li>
+                        <li><a href="../Hosting/cloudhosting.html">Cloud Hosting</a></li>
+                        <li><a href="../Hosting/resellerhosting.html">Reseller Hosting</a></li>
+                        <li><a href="../Hosting/wordpresshosting.html">WordPress Hosting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Comparison</a>
+                    
+                   <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Comapre/compare.html">All In One Comparison</a></li>
+                        <li><a href="../Comapre/godaddyvshostinger.html">Godaddy vs Hostinger</a></li>
+                        <li><a href="../Comapre/godaddy-vs-bluehost.html">GoDaddy vs Bluehost</a></li>
+                        <li><a href="../Comapre/godaddy-vs-milesweb.html">GoDaddy vs MilesWeb</a></li>
+                        <li><a href="../Comapre/hostinger-vs-bluehost.html">Hostinger vs Bluehost</a></li>
+                        <li><a href="../Comapre/hostinger-vs-milesweb.html">Hostinger vs MilesWeb</a></li>
+                        <li><a href="../Comapre/bluehost-vs-milesweb.html">Bluehost vs MilesWeb</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Reviews</a>
+                    
+                    <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Review/godaddy.html">GoDaddy Review</a></li>
+                        <li><a href="../Review/hostinger.html">Hostinger Review</a></li>
+                        <li><a href="../Review/bluehost.html">Bluehost Review</a></li>
+                        <li><a href="../Review/milesweb.html">MilesWeb  Review</a></li>
+                    </ul>
+                 </li>
+                     <li><a href="#">Guide</a>
+                       <ul> <!-- Yahan se ID hata di hai -->
+                            <li><a href="../Guide/choose-provider.html">Web Hosting Guide</a></li>
+                            <li><a href="../Guide/how-to-build-website-using-ai.html">AI Website Building Guide</a></li>
+                            <li><a href="../Guide/wordpress-vs-costom-html.html">Wordpress Vs Coding</a></li>
+                            <li><a href="../Guide/migration-guide.html">Website Migration</a></li>
+                            <li><a href="../Guide/pre-launch-security.html">Pre-Launch Security</a></li>
+                        </ul>
+                    </li>   
+                   <li><a href="../Blogs/Blogs.html">Blogs</a>
+                       
+                    </li> 
+                   <li><a href="#">About Us</a>
+                    
+                       <ul> <!-- Yahan se ID hata di hai -->
+                            <li><a href="../Contact/about.html">About us</a></li>
+                            <li><a href="../Contact/contact.html">Contact us</a></li>
+                            <li><a href="../Contact/disclaimer.html">Disclaimer</a></li>
+                            <li><a href="../Contact/privacy.html">Privacy Policy</a></li>
+                            <li><a href="../Contact/terms.html">Terms of Service</a></li>
+                        </ul>
+                
+                </li> 
+            </ul>
+            </nav>
+    </header>
+
+    <div class="headers1">
+        <h1>Complete Guide to VPS Hosting</h1>
+        <section style="font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; padding: 80px 20px; background-color: #f4f7f6; color: #333; line-height: 1.6;">
+       
+    
+  <div style="max-width: 1100px; margin: 0 auto;">
+    
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+      <h2 style="font-size: 2.5rem; color: #111827; margin-bottom: 20px; font-weight: 700;">What is VPS Hosting?</h2>
+      <p style="font-size: 1.125rem; color: #4b5563; margin: 0;">
+        <strong>VPS (Virtual Private Server)</strong> is the perfect middle ground between Shared and Dedicated hosting. It uses virtualization technology to split a single powerful physical server into multiple isolated virtual environments. Even though you share the physical hardware, your server resources (RAM, CPU, and Disk Space) are 100% dedicated to you.
+      </p>
+    </div>
+
+    <hr style="border: 0; height: 1px; background: #e5e7eb; margin-bottom: 50px;">
+
+    <h3 style="text-align: center; font-size: 2rem; color: #111827; margin-bottom: 40px; font-weight: 600;">Who Should Buy It & Why?</h3>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+      
+      <div style="flex: 1 1 300px; background: #ffffff; padding: 35px 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #f3f4f6; transition: transform 0.3s ease;">
+        <div style="font-size: 2rem; margin-bottom: 15px;">📈</div>
+        <h4 style="font-size: 1.25rem; color: #1f2937; margin-top: 0; margin-bottom: 12px; font-weight: 600;">Growing Websites</h4>
+        <p style="font-size: 0.95rem; color: #6b7280; margin: 0;">
+          <strong>Why:</strong> If your website is outgrowing shared hosting and experiencing slow load times during traffic spikes, a VPS guarantees the dedicated resources needed to keep your site fast, stable, and capable of handling thousands of visitors.
+        </p>
+      </div>
+
+      <div style="flex: 1 1 300px; background: #ffffff; padding: 35px 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #f3f4f6;">
+        <div style="font-size: 2rem; margin-bottom: 15px;">🛒</div>
+        <h4 style="font-size: 1.25rem; color: #1f2937; margin-top: 0; margin-bottom: 12px; font-weight: 600;">eCommerce Stores</h4>
+        <p style="font-size: 0.95rem; color: #6b7280; margin: 0;">
+          <strong>Why:</strong> Online stores require maximum uptime and enhanced security to process customer payments safely. A VPS provides an isolated environment, protecting your business from the security vulnerabilities of other websites.
+        </p>
+      </div>
+
+      <div style="flex: 1 1 300px; background: #ffffff; padding: 35px 25px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #f3f4f6;">
+        <div style="font-size: 2rem; margin-bottom: 15px;">👨‍💻</div>
+        <h4 style="font-size: 1.25rem; color: #1f2937; margin-top: 0; margin-bottom: 12px; font-weight: 600;">Developers & Agencies</h4>
+        <p style="font-size: 0.95rem; color: #6b7280; margin: 0;">
+          <strong>Why:</strong> If you need full root access to install custom software, choose a specific Operating System (like Ubuntu, CentOS, or Windows), or configure specialized server environments for web apps, VPS gives you complete technical control.
+        </p>
+      </div>
+
+    </div>
+  </div>
+  
+</section>
+        <p>Compare the top VPS providers in India (2026 Live Prices) to make an informed decision for your growing website.</p>
+    </header>
+
+
+    <div class="container">
+        
+        <section class="comparison-header">
+            <h2>Top VPS Providers Compared</h2>
+            <p>Select your billing cycle below to see accurate pricing.</p>
+        </section>
+
+        <div class="pricing-controls">
+            <div class="toggle-container">
+                <button id="btn-monthly" class="toggle-btn">Monthly Plan</button>
+                <button id="btn-3years" class="toggle-btn active"> Best Value</button>
+            </div>
+        </div>
+
+        <div class="compare-grid">
+            
+            <div class="compare-card best-choice">
+                <div class="badge">Overall Best</div>
+                <div ><span class="logo-text"><img src="Images/Hostinger-logo-primary.png" width="200"></span></div>
+                
+                <div class="price-box">
+                    <span class="price-amount" id="price-hostinger">₹599</span>
+                    <span class="price-duration">/mo</span>
+                </div>
+                
+                <ul class="features-list">
+                    <li>1 vCPU Core & 4 GB RAM</li>
+                    <li>50 GB NVMe Storage</li>
+                    <li>4 TB Bandwidth & Free Backups</li>
+                    <li>AMD EPYC & AI Assistant</li>
+                </ul>
+
+                <div class="pros-cons">
+                    <p class="pros"><strong>Pros:</strong> Powerful AMD servers, excellent AI tools for setup.</p>
+                    <p class="cons"><strong>Cons:</strong> Renewal price is slightly higher.</p>
+                </div>
+                <div class="rating">★★★★★ (4.8/5)</div>
+                <a href="https://www.hostinger.in/vps-hosting"  target="_blank" class="affiliate-btn">Choose Hostinger</a>
+            </div>
+
+            <div class="compare-card">
+                <div><span class="logo-text"><img src="Images/MilesWeb Logo-Full-color.png" width="200"></span></div>
+                
+                <select id="milesweb-os" class="os-select">
+                    <option value="linux">Linux VPS (Default)</option>
+                    <option value="windows">Windows VPS</option>
+                </select>
+
+                <div class="price-box">
+                    <span class="price-amount" id="price-milesweb">₹549</span>
+                    <span class="price-duration">/mo</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>1 vCPU Core & 4 GB RAM</li>
+                    <li>50 GB NVMe Storage</li>
+                    <li>Indian Datacenter (Low Latency)</li>
+                    <li id="milesweb-os-text">Root Access / cPanel Support</li>
+                </ul>
+
+                <div class="pros-cons">
+                    <p class="pros"><strong>Pros:</strong> Very budget-friendly, great local Indian speeds.</p>
+                    <p class="cons"><strong>Cons:</strong> Customer support can take time during rush hours.</p>
+                </div>
+                <div class="rating">★★★★☆ (4.7/5)</div>
+                <a href="https://www.milesweb.in/vps-hosting" target="_blank" class="affiliate-btn">Choose MilesWeb</a>
+            </div>
+
+            <div class="compare-card">
+                <div><span class="logo-text"><img src="Images/Blue_Host_idSiPtxwZG_5.png" width="200"></span></div>
+                
+                <div class="price-box">
+                    <span class="price-amount" id="price-bluehost">₹1,649</span>
+                    <span class="price-duration">/mo</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>2 vCPU Cores & 4 GB RAM</li>
+                    <li>100 GB NVMe Storage</li>
+                    <li>Unmetered Bandwidth</li>
+                    <li>Root Access / cPanel Support</li>
+                </ul>
+
+                <div class="pros-cons">
+                    <p class="pros"><strong>Pros:</strong> Highly reliable, great for high-traffic apps.</p>
+                    <p class="cons"><strong>Cons:</strong> Expensive compared to standard providers.</p>
+                </div>
+                <div class="rating">★★★★☆ (4.6/5)</div>
+                <a href="https://www.bluehost.in/" target="_blank" class="affiliate-btn">Choose Bluehost</a>
+            </div>
+
+            <div class="compare-card">
+                <div><span class="logo-text"><img src="Images/GoDaddy_LockUp_RGB_Teal.png" width="200"></span></div>
+               
+                <div class="price-box">
+                    <span class="price-amount" id="price-godaddy">₹439</span>
+                    <span class="price-duration">/mo</span>
+                </div>
+
+                <ul class="features-list">
+                    <li>1 vCPU Core & 2 GB RAM</li>
+                    <li>40 GB SSD Storage</li>
+                    <li>Unmetered Bandwidth</li>
+                    <li>24/7 Phone Support</li>
+                </ul>
+
+                <div class="pros-cons">
+                    <p class="pros"><strong>Pros:</strong> Established brand, reliable phone support.</p>
+                    <p class="cons"><strong>Cons:</strong> Lower specs (SSD instead of NVMe, less RAM).</p>
+                </div>
+                 <div class="rating">★★★★☆ (4.5/5)</div>
+                <a href="https://www.godaddy.com/" target="_blank" class="affiliate-btn">Choose GoDaddy</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="disclaimer-wrapper">
+        <div class="disclaimer-box">
+            <strong>Disclaimer:</strong> The prices, features, and services mentioned on this page are for informational purposes and are subject to change by the hosting providers without prior notice. Please verify the latest pricing and plan details directly on the official websites before making a purchase. We are not responsible for any discrepancies or sudden changes in their offerings.
+        </div>
+    </div>
+
+  <footer class="main-footer">
+    <div class="container-5 footer-grid">
+        <div class="footer-col brand">
+            <a href="../index.html" >
+    <div class="logo" style="display: flex;left:0px; justify-self:center;align-items: center;center; gap: 15px;">
+    
+    <img src="../Images/IMG_20260314_093208.jpg" alt="Logo" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0, 231, 255, 0.5);">
+    
+    <span style="color: #ffffff; font-weight: 800; font-size: 9px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 0.5px;">
+        GetYourHosting
+    </span>
+
+</div></a>
+            <p>Getyourhosting is your ultimate guide to finding the perfect web hosting. We provide detailed comparisons, transparent pricing, and expert insights to help you launch your website with confidence.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hosting Services</h4>
+            <ul>
+                 <li><a href="../Hosting/shared-hosting.html">Shared Hosting</a></li>
+                        <li><a href="../Hosting/vpshosting.html">VPS Hosting</a></li>
+                        <li><a href="../Hosting/dedicatedserver.html">Dedicated Servers</a></li>
+                        <li><a href="../Hosting/cloudhosting.html">Cloud Hosting</a></li>
+                        <li><a href="../Hosting/resellerhosting.html">Reseller Hosting</a></li>
+                        <li><a href="../Hosting/wordpresshosting.html">WordPress Hosting</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="../Contact/about.html">About Us</a></li>
+                <li><a href="../Contact/contact.html">Contact Us</a></li>
+                <li><a href="../Contact/privacy.html">Privacy Policy</a></li>
+                <li><a href="../Contact/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+<div class="footer-col">
+    <h4>Support</h4>
+    <p>Need help? Our team is available 24/7/365.</p>
+    <p>
+        <strong>Email:</strong> 
+        <a href="mailto:getyourhosting247@gmail.com" style="text-decoration: none; color: inherit;">
+            getyourhosting247@gmail.com
+        </a>
+    </p>
+</div>
+    </div>
+
+
+         
+        </div>
+    </div>
+        <div class="footer-bottom">
+        <div class="container-4 flex-bottom">
+             <div class="footer">
+        <p>&copy; 2026 Get Your Hosting. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../js/script.js"></script>   
+
+    <script>
+        // Data Structure for Live 2026 VPS Pricing
+        const vpsData = {
+            hostinger: {
+                monthly: "₹999",
+                yearly: "₹599"
+            },
+            milesweb: {
+                linux: {
+                    monthly: "₹949",
+                    yearly: "₹549"
+                },
+                windows: {
+                    monthly: "₹2999",
+                    yearly: "₹1999"
+                }
+            },
+            bluehost: {
+                monthly: "₹699",
+                yearly: "₹459"
+            },
+            godaddy: {
+                monthly: "₹649",
+                yearly: "₹649"
+            }
+        };
+
+        // State Trackers
+        let currentBilling = 'yearly'; 
+        let currentMileswebOS = 'linux';
+
+        // Function to update the DOM
+        function updatePrices() {
+            // Update standard cards
+            document.getElementById('price-hostinger').innerText = vpsData.hostinger[currentBilling];
+            document.getElementById('price-bluehost').innerText = vpsData.bluehost[currentBilling];
+            document.getElementById('price-godaddy').innerText = vpsData.godaddy[currentBilling];
+            
+            // Update MilesWeb card based on selected OS AND Billing
+            document.getElementById('price-milesweb').innerText = vpsData.milesweb[currentMileswebOS][currentBilling];
+
+            // Update text in MilesWeb feature list based on OS
+            document.getElementById('milesweb-os-text').innerHTML = currentMileswebOS === 'linux' ? 'Root Access / cPanel Support' : 'RDP Access / Windows Server';
+        }
+
+        // Event Listeners for Billing Toggle
+        document.getElementById('btn-monthly').addEventListener('click', function() {
+            currentBilling = 'monthly';
+            this.classList.add('active');
+            document.getElementById('btn-3years').classList.remove('active');
+            updatePrices();
+        });
+
+        document.getElementById('btn-3years').addEventListener('click', function() {
+            currentBilling = 'yearly';
+            this.classList.add('active');
+            document.getElementById('btn-monthly').classList.remove('active');
+            updatePrices();
+        });
+
+        // Event Listener for MilesWeb OS Dropdown
+        document.getElementById('milesweb-os').addEventListener('change', function(e) {
+            currentMileswebOS = e.target.value;
+            updatePrices();
+        });
+
+        // Initialize prices on page load
+        updatePrices();
+    </script>
+
+</body>
+</html>

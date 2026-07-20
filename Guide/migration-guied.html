@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Website Migration Guide | GetYourHosting</title>
+    
+    <!-- 1. SEO Meta Tags & Canonical Link -->
+    <meta name="description" content="Learn how to easily migrate your website to a new host with our comprehensive website migration guide. Follow step-by-step instructions on GetYourHosting.">
+    <!-- Exact file name as provided -->
+    <link rel="canonical" href="https://getyourhosting.in/Guide/migration-guied.html">
+
+    <!-- 2. Schema Markup (JSON-LD) for Article/Guide Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Website Migration Guide",
+      "name": "Website Migration Guide | GetYourHosting",
+      "description": "Learn how to easily migrate your website to a new host with our comprehensive step-by-step website migration guide.",
+      "url": "https://getyourhosting.in/Guide/migration-guied.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "GetYourHosting"
+      }
+    }
+    </script>
+
+    <!-- 3. Open Graph (Social Media Tags) -->
+    <meta property="og:site_name" content="GetYourHosting">
+    <meta property="og:title" content="Website Migration Guide | GetYourHosting">
+    <meta property="og:description" content="Learn how to easily migrate your website to a new host with our comprehensive step-by-step website migration guide.">
+    <meta property="og:image" content="https://getyourhosting.in/Images/social-preview.jpg"> 
+    <meta property="og:url" content="https://getyourhosting.in/Guide/migration-guied.html">
+    <meta property="og:type" content="article">
+
+    <!-- 4. Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Migration Guide | GetYourHosting">
+    <meta name="twitter:description" content="Learn how to easily migrate your website to a new host with our comprehensive step-by-step website migration guide.">
+    <meta name="twitter:image" content="https://getyourhosting.in/Images/social-preview.jpg">
+
+    <!-- 5. Fonts & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="Images/IMG_20260314_093208.jpg">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TRV26XW6J3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TRV26XW6J3');
+    </script>
+    <style>
+        /* === RESET & BASE STYLES === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
+             padding-top: 100px; /* Navbar ke niche content ke liye gap */
+        }
+
+        /* === ARTICLE CONTAINER === */
+        .article-container {
+            max-width: 900px; /* Kept narrow for better readability focus */
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* === HEADER SECTION === */
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .article-header h1 {
+            color: #0f172a;
+            font-size: 2.6rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .article-header p {
+            color: #64748b;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* === WARNING / PRO TIP BOX === */
+        .pro-tip-box {
+            background-color: #fffbeb; /* Light yellow/amber */
+            border-left: 5px solid #f59e0b; /* Warning amber */
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pro-tip-icon {
+            font-size: 2rem;
+        }
+
+        .pro-tip-content h4 {
+            color: #b45309;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .pro-tip-content p {
+            color: #78350f;
+            font-size: 0.95rem;
+        }
+
+        /* === MIGRATION STEPS === */
+        .migration-steps-wrapper {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        /* Vertical Line for Timeline effect */
+        .migration-steps-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 38px;
+            width: 4px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #ffffff;
+            border: 4px solid #673de6; /* Purple Theme */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #673de6;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(103, 61, 230, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .step-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+            flex-grow: 1;
+            border: 1px solid transparent;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Hover Effects */
+        .step-row:hover .step-icon {
+            background-color: #673de6;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .step-row:hover .step-content {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            border-color: #e2e8f0;
+        }
+
+        .step-content h3 {
+            color: #0f172a;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        /* === HELP BOX / CTA === */
+        .help-box {
+            text-align: center;
+            background-color: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .help-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .help-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            border: 2px solid #673de6;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-outline:hover {
+            background-color: #673de6;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .migration-steps-wrapper::before {
+                display: none; /* Hide timeline line on mobile */
+            }
+            .step-row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .step-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.4rem;
+            }
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+<link rel="icon" type="image/png" href="Images/IMG_20260314_093208.jpg"></head>
+<body>
+      <header class="navbar-wrapper">
+        <div class="affiliate-banner-1">
+            <p style="margin: 0; color: #d7dbe0; font-size: 14px; line-height: 1.5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <strong style="color: #dde2ee; font-weight: 700;">Disclosure:</strong> We may earn a commission when you purchase through our links, at no extra cost to you. 
+                 <a href="../Contact/disclaimer.html" style="color: #0d9488; text-decoration: none; font-weight: 700; margin-left: 8px;">Know More →</a>
+            </p>
+
+        </div>
+
+        <nav class="flex">
+             <a href="../index.html" >
+             <div class="logo" style="display: flex;left:0px; justify-self:center;align-items: center;center; gap: 15px;">
+    
+                  <img src="../Images/IMG_20260314_093208.jpg" alt="Logo" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0, 231, 255, 0.5);">
+    
+                 <span style="color: #ffffff; font-weight: 800; font-size: 18px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 0.5px;">
+                           GetYourHosting
+                 </span>
+
+             </div>
+             </a>
+             <div class="menu-icon" id="hamburger-icon">☰</div>
+                 <ul id="nav-menu"> <!-- Sirf yahan ID rahegi -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Hosting</a>
+                    
+                    <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Hosting/webhosting.html">Web Hosting</a></li>
+                        <li><a href="../Hosting/shared-hosting.html">Shared Hosting</a></li>
+                        <li><a href="../Hosting/vpshosting.html">VPS Hosting</a></li>
+                        <li><a href="../Hosting/dedicatedserver.html">Dedicated Servers</a></li>
+                        <li><a href="../Hosting/cloudhosting.html">Cloud Hosting</a></li>
+                        <li><a href="../Hosting/resellerhosting.html">Reseller Hosting</a></li>
+                        <li><a href="../Hosting/wordpresshosting.html">WordPress Hosting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Comparison</a>
+                    
+                   <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Comapre/compare.html">All In One Comparison</a></li>
+                        <li><a href="../Comapre/godaddyvshostinger.html">Godaddy vs Hostinger</a></li>
+                        <li><a href="../Comapre/godaddy-vs-bluehost.html">GoDaddy vs Bluehost</a></li>
+                        <li><a href="../Comapre/godaddy-vs-milesweb.html">GoDaddy vs MilesWeb</a></li>
+                        <li><a href="../Comapre/hostinger-vs-bluehost.html">Hostinger vs Bluehost</a></li>
+                        <li><a href="../Comapre/hostinger-vs-milesweb.html">Hostinger vs MilesWeb</a></li>
+                        <li><a href="../Comapre/bluehost-vs-milesweb.html">Bluehost vs MilesWeb</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Reviews</a>
+                    
+                    <ul> <!-- Yahan se ID hata di hai -->
+                        <li><a href="../Review/godaddy.html">GoDaddy Review</a></li>
+                        <li><a href="../Review/hostinger.html">Hostinger Review</a></li>
+                        <li><a href="../Review/bluehost.html">Bluehost Review</a></li>
+                        <li><a href="../Review/milesweb.html">MilesWeb  Review</a></li>
+                    </ul>
+                 </li>
+                     <li><a href="#">Guide</a>
+                       <ul> <!-- Yahan se ID hata di hai -->
+                            <li><a href="../Guide/choose-provider.html">Web Hosting Guide</a></li>
+                            <li><a href="../Guide/how-to-build-website-using-ai.html">AI Website Building Guide</a></li>
+                            <li><a href="../Guide/wordpress-vs-costom-html.html">Wordpress Vs Coding</a></li>
+                            <li><a href="../Guide/migration-guide.html">Website Migration</a></li>
+                            <li><a href="../Guide/pre-launch-security.html">Pre-Launch Security</a></li>
+                        </ul>
+                    </li>   
+                   <li><a href="../Blogs/Blogs.html">Blogs</a>
+                       
+                    </li> 
+                   <li><a href="#">About Us</a>
+                    
+                       <ul> <!-- Yahan se ID hata di hai -->
+                            <li><a href="../Contact/about.html">About us</a></li>
+                            <li><a href="../Contact/contact.html">Contact us</a></li>
+                            <li><a href="../Contact/disclaimer.html">Disclaimer</a></li>
+                            <li><a href="../Contact/privacy.html">Privacy Policy</a></li>
+                            <li><a href="../Contact/terms.html">Terms of Service</a></li>
+                        </ul>
+                
+                </li> 
+            </ul>
+            </nav>
+    </header>
+    <main class="article-container">
+        
+        <div class="article-header">
+            <h1>Website Migration Guide</h1>
+            <p>A simple, step-by-step method to safely move your website from your old host to a new one without experiencing any downtime.</p>
+        </div>
+
+        <div class="pro-tip-box">
+            <div class="pro-tip-icon">⚠️</div>
+            <div class="pro-tip-content">
+                <h4>Pro Tip: Avoid Downtime</h4>
+                <p>Do not cancel your old hosting plan until your website is 100% uploaded and fully live on the new server!</p>
+            </div>
+        </div>
+
+        <div class="migration-steps-wrapper">
+            
+            <div class="step-row">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <h3>Purchase New Hosting</h3>
+                    <p>First, choose a better hosting provider based on your specific needs and budget. If you are unsure, check our <strong>Comparison Section</strong> for reliable options. Activate your new plan, but do not touch your old hosting account just yet.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <h3>Backup Your Old Website</h3>
+                    <p>Log in to your old hosting account (cPanel/hPanel). Use the 'File Manager' to download all your website files (typically from the public_html folder) in a ZIP format. If your site uses a database (like WordPress), export your SQL database from phpMyAdmin as well.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-content">
+                    <h3>Upload Data to the New Server</h3>
+                    <p>Now, log in to your new hosting's control panel. Open the 'File Manager', upload your ZIP backup file, and extract it. If you have a database, create a new empty database on the new host and import your saved SQL file into it.</p>
+                </div>
+                <div class="step-icon" style="order: -1;">3</div> </div>
+
+            <div class="step-row">
+                <div class="step-icon">4</div>
+                <div class="step-content">
+                    <h3>Update Domain DNS / Nameservers</h3>
+                    <p>This is the most crucial step. Log in to your Domain Registrar (where you bought your domain name). Go to the domain settings, remove the old 'Nameservers', and enter the Nameservers provided by your new host (e.g., ns1.dns-parking.com). This update can take anywhere from 2 to 24 hours to fully propagate worldwide.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-icon">5</div>
+                <div class="step-content">
+                    <h3>Final Testing & Cancel Old Plan</h3>
+                    <p>Once the DNS has updated, browse your website to see if everything is functioning perfectly. Ensure your SSL certificate is active. When you are confident that the site is loading smoothly from the new server, you can safely contact your old hosting company to cancel your plan!</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="help-box">
+            <h3>Need Help with Migration?</h3>
+            <p>Did you know? Top providers like Hostinger offer "Free Website Migration." This means their expert technical team will do all this heavy lifting for you at no extra cost!</p>
+            <a href="wordpresshosting.html" class="cta-btn-outline">View Hosting Providers with Free Migration</a>
+        </div>
+
+    </main>
+
+  
+     
+<footer class="main-footer">
+    <div class="container-5 footer-grid">
+        <div class="footer-col brand">
+            <a href="../index.html" >
+    <div class="logo" style="display: flex;left:0px; justify-self:center;align-items: center;center; gap: 15px;">
+    
+    <img src="../Images/IMG_20260314_093208.jpg" alt="Logo" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0, 231, 255, 0.5);">
+    
+    <span style="color: #ffffff; font-weight: 800; font-size: 9px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; letter-spacing: 0.5px;">
+        GetYourHosting
+    </span>
+
+</div></a>
+            <p>Getyourhosting is your ultimate guide to finding the perfect web hosting. We provide detailed comparisons, transparent pricing, and expert insights to help you launch your website with confidence.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Hosting Services</h4>
+            <ul>
+                 <li><a href="../Hosting/shared-hosting.html">Shared Hosting</a></li>
+                        <li><a href="../Hosting/vpshosting.html">VPS Hosting</a></li>
+                        <li><a href="../Hosting/dedicatedserver.html">Dedicated Servers</a></li>
+                        <li><a href="../Hosting/cloudhosting.html">Cloud Hosting</a></li>
+                        <li><a href="../Hosting/resellerhosting.html">Reseller Hosting</a></li>
+                        <li><a href="../Hosting/wordpresshosting.html">WordPress Hosting</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="../Contact/about.html">About Us</a></li>
+                <li><a href="../Contact/contact.html">Contact Us</a></li>
+                <li><a href="../Contact/privacy.html">Privacy Policy</a></li>
+                <li><a href="../Contact/terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+<div class="footer-col">
+    <h4>Support</h4>
+    <p>Need help? Our team is available 24/7/365.</p>
+    <p>
+        <strong>Email:</strong> 
+        <a href="mailto:getyourhosting247@gmail.com" style="text-decoration: none; color: inherit;">
+            getyourhosting247@gmail.com
+        </a>
+    </p>
+</div>
+    </div>
+
+
+         
+        </div>
+    </div>
+        <div class="footer-bottom">
+        <div class="container-4 flex-bottom">
+             <div class="footer">
+        <p>&copy; 2026 Get Your Hosting. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../js/script.js"></script>
+</body>
+</html>
